@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>flex5_jutify-content</title>
+  <style>
+  body { margin: 0; font-size: 2em; font-weight: bold; text-align: center;}
+  .wrapper .item1 { background-color: #A9907E;}
+  .wrapper .item2 { background-color: #F3DEBA;}
+  .wrapper .item3 { background-color: #ABC4AA;}
+  .wrapper {
+    color:#fff; border: 6px solid #000; width: 80vw; margin: 2vw auto;
+
+    display: flex;
+    flex-flow: row nowrap; /* 의미x 익숙해지라고 */
+  }
+
+  #container1 {
+    /* 주축 기준 플렉스 아이템 정렬 */
+    justify-content: flex-start; /* 기본값. 주축의 시작점 기준 정렬 */
+    justify-content: flex-end; /* 주축의 끝점 기준 정렬 */
+    justify-content: center; /* 주축 기준 중앙 정렬 */
+    justify-content: space-around; /* 주축 기준으로 여백 포함 동일한 간격으로 정렬*/
+    justify-content: space-between; /* 주축 기준으로 양끝에 맞춰 아이템을 정렬하고
+    여백은 동일한 값으로 부여하여 정렬 */
+    justify-content: space-evenly; /* 주축 기준으로 아이템과 여백을 다 동일하게 정렬 */
+  }
+  #container2 {
+    height: 40vh;
+    /* 주축 세로, 열, y */
+    flex-direction: column;
+    justify-content: flex-end;
+    justify-content: center;
+    justify-content: space-around;
+    justify-content: space-between;
+    justify-content: space-evenly;
+  }
+  </style>
+</head>
+<body>
+  <h1>flex5 : jutify-content</h1>
+  <div class="wrapper" id="container1"> <!-- flex-container -->
+    <div class="item item1">item1</div> <!-- flex-item -->
+    <div class="item item2">item2</div> <!-- flex-item -->
+    <div class="item item3">item3</div> <!-- flex-item -->
+  </div>
+  <div class="wrapper" id="container2"> 
+    <div class="item item1">item1</div>
+    <div class="item item2">item2</div>
+    <div class="item item3">item3</div>
+  </div>
+</body>
+</html>

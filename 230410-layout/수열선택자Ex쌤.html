@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>수열선택자Ex</title>
+  <style>
+ .gnb {
+  list-style: none;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+  padding: 0;
+  margin: 50px auto;
+
+/* widht: 900px; */
+  width: 80%;
+  overflow: hidden;
+ }
+ .gnb li {
+  float: left;
+  width: 11.111111%;
+ }
+ .gnb li a {
+  text-decoration: none;
+  color:firebrick;
+  display: block;
+  background-color: bisque;
+  /* witht:100px; */
+  height: 50px;
+  line-height: 50px;
+ }
+ .gnb li:first-child a {
+  border-radius: 30px 0 0 30px;
+ }
+.gnb li:last-child a {
+  border-radius: 0 30px 30px 0;
+}
+.gnb li:nth-child(2n) a { /* even == 2n+2 */
+  background-color: gray;
+}
+.gnb li:nth-child(4n+3) a {
+  background-color: thistle;
+}
+  </style>
+</head>
+<body>
+    <ul class="gnb">
+      <li><a href="#">1</a></li>
+      <li><a href="#">2</a></li>
+      <li><a href="#">3</a></li>
+      <li><a href="#">4</a></li>
+      <li><a href="#">5</a></li>
+      <li><a href="#">6</a></li>
+      <li><a href="#">7</a></li>
+      <li><a href="#">8</a></li>
+      <li><a href="#">9</a></li>
+    </ul>
+</body>
+</html>

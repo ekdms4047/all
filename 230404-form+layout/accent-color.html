@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>accent-color</title>
+  <style>
+    /*
+      accent-color
+        input type= checkbox, radio, range, progress 컨트롤 값 제어
+    */
+    form fieldset {
+      border: 3px solid olive;
+      padding: 20px;
+      max-width: 400px;
+    }
+    form fieldset legend {
+      padding: 10px 15px;
+    }
+    form fieldset input[type=radio] {
+      accent-color: #da1e37;
+    }
+    form fieldset progress[value] {
+      accent-color: #9ceaef;
+    }
+    form fieldset input[type=range] {
+      accent-color:orange;
+    }
+  </style>
+</head>
+<body>
+  <form>
+    <fieldset>
+      <legend>checkbox, radio</legend>
+      <input type="radio" name="cake" id="strawberry" value="딸기" checked>
+      <label for="strawberry">딸기 케익🍰</label>
+      <input type="radio" name="cake" id="choco" value="초코">
+      <label for="choco">초코 케익🎂</label>
+      <input type="radio" name="cake" id="cup" value="컵">
+      <label for="cup">컵 케익🧁</label>
+    </fieldset>
+    
+    <fieldset>
+      <legend>progress</legend>
+      <label for="userProgress">progress</label>
+      <progress id="userProgress" min="0" max="100" value="70"></progress>
+    </fieldset>
+
+    <fieldset>
+      <legend>range</legend>
+      <label for="userRange">range</label>
+      <input type="range" id="userRange">
+    </fieldset>
+
+  </form>
+</body>
+</html>

@@ -1,0 +1,77 @@
+@charset "utf-8";
+
+body {
+  /*
+  font-family:'나눔고딕','맑은 고딕',돋움, sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  */
+
+  /* 축약형: font-size, font-family는 필수 작성
+  font: x x x font-size / (line-height_ 안써도 됨) font-family;
+  line-height 작성시 반드시 font-size 뒤에 /포함 작성
+  font-family는 반드시 제일 마지막 작성
+  */
+  font: 18px / 1.6 '나눔고딕','맑은 고딕', 돋움, sans-serif;
+  color: #222; /* 부드러운 컬러 */
+}
+/***** main *****/
+main > h1 {
+  background-color: #F7DCEF;
+  color:#B0ACFC;
+  text-align: center; /* 인라인 요소 중앙 정렬 */
+  font-family: '휴먼옛체','맑은 고딕',돋움, sans-serif;
+}
+main .deco_color {/* 하위 선택자 : 기준 선택자 하위(자식, 자손 모두 포함)
+  에 있는 선택자. 띄어쓰기로 표기 */
+  color: red;
+  font-size: 16px;}
+
+/***** section *****/
+/* section { text-align: center; } */
+main > section {
+  text-align: center;
+  background-color: #B0ACFC;
+}
+main > section > h2 {
+  color:white;
+  text-decoration:underline;
+  font-size: 22px;
+  font-weight: normal;
+}
+main > section > a {
+  background-color: #222;
+  
+}
+main > section > a:hover {
+  background-color: fuchsia;
+}
+
+/***** container *****/
+main > .container {
+  background-color:#F2D1C4;
+}
+main > .container > h2 {
+  text-align: center;
+  text-decoration: underline;
+  color:rebeccapurple;
+}
+main > .container > section > h3 {
+  text-align: right;
+  color:white;
+  background-color: fuchsia;
+}
+main > .container h3.deco_left { /* 종속 선택자: 띄어쓰기 없이 작성.
+  h3요소가 가진 클래스 중에 deco_left 값을 가진 요소 탐색 */
+  background-color:transparent;
+  color:#222;
+  text-align: left;
+}
+
+/* main > .container > section > ul > .deco_bg{
+  background-color: #B031FC;
+} */
+main > .container .deco_bg {
+  background-color:cadetblue;
+}
+

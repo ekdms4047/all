@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>text-shadow</title>
+  <style>
+    /*
+    body { 브라우저 상에 있는 인라인 요소 모두를 중앙 정렬
+      text-align: center;
+    }
+    */
+    h1{
+      text-align: center;
+      font-family:'나눔스퀘어','맑은 고딕', 돋움, sans-serif; 
+      font-size: 30px;
+    }
+    .title1 {
+      text-shadow: 10px 10px 10px #999; /* x축 y축 번짐 색상 */
+    }
+    .title2{
+      text-shadow: -10px -10px 10px orange;
+    }
+    .title3{
+      text-shadow: 0 10px 5px #000;
+      text-shadow: 0 -10px 5px #000;
+    }
+    .title4{
+      text-shadow: 0 10px 0 lightseagreen;
+      text-shadow: 0 10px lightseagreen; /* x축 y축 (번짐생략) 색상 */
+    }
+    .title5{
+      color: yellowgreen;
+      text-shadow:0 10px ; /* 번짐 생략. 색상 생략시 글자 색을 따라감 */
+    }
+    .title6{
+      /* 중첩 그림자 */
+      text-shadow: 
+      0 0 10px #999, 
+      10px 10px 10px red,
+      -10px -10px 10px orange,
+      10px 10px 10px blue;
+    }
+  </style>
+</head> 
+<body>
+    <h1 class="title1">서체그림자 Text-Shadow1</h1>
+    <h1 class="title2">서체그림자 Text-Shadow2</h1>
+    <h1 class="title3">서체그림자 Text-Shadow3</h1>
+    <h1 class="title4">서체그림자 Text-Shadow4</h1>
+    <h1 class="title5">서체그림자 Text-Shadow5</h1>
+    <h1 class="title6">서체그림자 Text-Shadow6</h1>
+</body>
+</html>

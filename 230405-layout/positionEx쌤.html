@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>positionEx1</title>
+  <style>
+    .container {
+      background-color: darkcyan;
+      list-style: none;
+      width: 400px; height: 400px;
+      margin: 50px auto;
+      padding: 0;
+      position: relative; /* 위치 특성값과 함께 작성하지 않으면 기존 흐름을 유지한 채
+      li 포지션의 기준이 될 수 있기 때문 */
+    }
+    .container .box {
+      background-color: burlywood;
+      width: 80px; height: 80px;
+      text-align: center;
+      line-height: 80px;
+      position: absolute; /* 가장 가까운 부모 요소에 포지션이 적용되어 있으면 그 부모를
+      기준으로 위치 설정 */
+    }
+    .container .box1 {
+      top: 0; left: 0;
+     /* position:relative;
+      top:0; left: 0; */
+    }
+    .container .box2 {
+      top: 0; right: 0;
+    /*  position:relative;
+      left:320px; top: -80px;
+      (이렇게도 가능-> right: -320px; 이렇게 잘안씀 top:-80px) */
+    }
+    .container .box3 {
+      bottom: 0; left: 0;
+    }
+    .container .box4 {
+      bottom: 0; right: 0;
+    }
+    .container .box5 {
+      top: 0; right: 0; bottom: 0; left: 0;
+      margin: auto;
+    }
+    /* absolute, fixed 포지션 중앙 정렬 
+        1. 직접 계산
+          top:160px; left: 160px; 
+        2. 위치 특성 값 50%, 같은 방향의 margin 값을 -로 요소의 반값 적용
+          top: 50%; left: 50%;
+          margin-top: -40px; margin-left: -40px; 
+        3. top: 0; right: 0; bottom: 0; left: 0; margin: auto;
+        높이 값이 지정되어 있어야만 세로 중앙 정렬 가능
+      
+        relative 포지션 중앙 정렬
+          위치 특성이 작성되어 있지 않으면 margin: 0 auto로 가능
+     */
+  </style>
+</head>
+<!--display inlineblock 잘 사용하지 않아 다은아!!-->
+<body>
+  <ul class="container">
+    <li class="box box1">1</li>
+    <li class="box box2">2</li>
+    <li class="box box3">3</li>
+    <li class="box box4">4</li>
+    <li class="box box5">5</li>
+  </ul>
+</body>
+</html>

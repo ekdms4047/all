@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>layout_sticky1</title>
+  <style>
+    body, h1, h2 {
+      margin: 0;
+      color: #fff;
+    }
+    /* 미리 클래스로 만들어 놓은 다음 필요할 때마다 html에 적용 */
+    .clearfix::after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+    
+    header, footer {
+      background-color: darkblue;
+      height: 100px;
+      padding: 20px;
+      /* clear: both; */
+    }
+    main {
+      background-color: #ddd;
+
+      /* overflow: hidden; */
+      /* float: left;
+      width: 100%; */
+    }
+    main article { /* 70% + p40px */
+      background-color: crimson;
+      height: 3000px;
+      width: 70%;
+      float: left;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    main aside {
+      background-color: darkmagenta;
+      height: 200px;
+      width: 30%;
+      float: left;
+      padding: 20px;
+      box-sizing: border-box;
+
+      position: sticky;
+      top:0;
+      /*
+        부모 요소들 중 overflow: hidden; 이 적용되어 있으면 작동하지 않음. height: %;인 경우도 작동하지 않음
+      */
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>layout_sticky1</h1>
+    <h2>header</h2>
+  </header>
+  <main class="clearfix">
+    <article>
+      <h2>main content</h2>
+    </article>
+    <aside>
+      <h2>sticky sidebar</h2>
+    </aside>
+  </main>
+  <footer>
+    <h2>footer</h2>
+  </footer>
+</body>
+</html>

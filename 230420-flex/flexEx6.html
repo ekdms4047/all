@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>flexEx6</title>
+  <style>
+    body { margin: 0; font-size:1.1rem; text-align: center;}
+    .container{ 
+    background-color: violet;
+    display: flex;
+    }
+    .container h1 {
+    background-color: aqua; margin: 0; font-size: 1.4rem;
+    width: 4rem; aspect-ratio: 1;
+    display: flex;
+    justify-content: center; align-items: center;
+    }
+    .container form { /* flex-item / flex-container */
+      display: flex;
+      align-items: center;
+    }
+    .container form * {
+      outline: none;
+      font-size: 1.1rem;
+      border:1px solid #000;
+    }
+    .container form [type=search] {
+      border-right: none;
+      margin-left: 10px;
+      width: 200px;
+      padding: 5px;
+      height: 30px;
+    }
+    .container form [type=submit]{
+      height: 30px;
+    }
+    .container form [type=submit]:hover {
+      background-color: #000; color:#fff; cursor: pointer;
+    }
+    .container nav { 
+      background-color: chocolate; width: 4rem; 
+      display: flex;
+      justify-content: center; align-items: center;
+
+      margin-left: auto; /* 플렉스 아이템을 오른쪽으로 배치 */
+    }
+  </style>
+</head>
+<body>
+  <div class="container"><!-- flex-container -->
+   <h1>로고</h1><!-- flex-item-->
+    <form><!-- flex-item-->
+      <input type="search" name="search" id="search">
+      <button type="submit">검색</button>
+    </form>
+    <nav>메뉴</nav><!-- flex-item-->
+  </div>
+</body>
+</html>

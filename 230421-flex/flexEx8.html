@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>flexEx8</title>
+  <style>
+    h1 { text-align: center; }
+    .container { 
+      background-color: #00235B;
+      margin: 0 auto;
+      width: 70vw; 
+      /* height: 70vw; */
+      aspect-ratio: 1;
+      display: flex;
+      flex-flow: column wrap;
+      /* align-items: center; */
+      align-content: space-evenly;
+      justify-content:space-evenly;
+     
+    }
+    .container figure {
+      box-sizing: border-box;
+      border: 1px solid #fff;
+      margin: 0;
+      width: 42%;
+    }
+    .container figure img {
+      vertical-align: top;
+      width: 100%;
+    }
+    .container figure figcaption {
+      background-color: #A6D0DD; font-weight: bold;
+      text-align: center; padding: 0.3rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>상하 정렬 갤러리</h1>
+  <div class="container"> <!-- flex-container -->
+    <figure> <!-- flex-item -->
+      <img src="https://via.placeholder.com/300x200/FEE8B0/000?text=img+1">
+      <figcaption>Title1</figcaption>
+    </figure>
+    <figure>
+      <img src="https://via.placeholder.com/300x200/9CA777/fff?text=img+2">
+      <figcaption>Title2</figcaption>
+    </figure>
+    <figure>
+      <img src="https://via.placeholder.com/300x200/FFD3B0/000?text=img+3">
+      <figcaption>Title3</figcaption>
+    </figure>
+    <figure>
+      <img src="https://via.placeholder.com/300x200/FF6969/fff?text=img+4">
+      <figcaption>Title4</figcaption>
+    </figure>
+  </div>
+</body>
+</html>

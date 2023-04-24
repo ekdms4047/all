@@ -1,0 +1,82 @@
+@charset "utf-8";
+
+/* css 문서 내부에서 다른 문서 호출 */
+@import url("../assets/css/pretendardvariable-dynamic-subset.css");
+
+/*'Sigmar', cursive; */
+@import url('https://fonts.googleapis.com/css2?family=Sigmar&display=swap');
+
+body {
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",Dotum,sans-serif;
+  font-weight: bold;
+  text-align: center;
+}
+main {
+  background-color:blanchedalmond;
+  height: 300vh;
+  font-size: 2rem;
+  font-weight: 700;
+  padding-top: 100px;
+}
+h1 {
+  background-color: #222;
+  color:#fff;
+  font-family:'Sigmar', cursive ;
+  font-size: 1.5rem;
+  /* height: 100px; line-height: 100px; */
+  /* padding: 1.5rem; */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+}
+/* 메뉴 */
+.gnb {
+  background-color:tan;
+  display: flex;
+  justify-content:center;
+  position: sticky;
+  top:0;
+  height:40px;
+}
+.gnb a {
+  display: block;
+}
+/* 각각의 대메뉴 제목 */
+.gnb > li > a {
+  font-size: 1.2rem;
+  min-width: 120px;
+  height: 40px;
+  line-height: 40px;
+
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+  border-right: 1px solid #000;
+}
+.gnb > li:last-child > a {
+  border-right: none;
+}
+.gnb > li >a:hover {
+  background-color: #222;
+  color:#fff;
+}
+.gnb .sub_menu { /* 소메뉴 */
+   display: none; 
+}
+/* 각 대메뉴에 마우스를 올리면, 해당 대메뉴의 소메뉴가 나타남 */
+.gnb > li:hover > .sub_menu {
+  display: block;
+}
+.gnb .sub_menu a {
+  background-color: tomato; color:#fff;
+  border-bottom: 1px solid #000;
+  height: 30px; line-height: 30px;
+}
+.gnb .sub_menu a:hover {
+  background-color: coral;
+}
+.gnb .sub_menu li:last-child a {
+  border-bottom: none;
+}

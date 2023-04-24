@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>positionEx3</title>
+  <style>
+   menu.gnb {
+    list-style: none;
+    margin: 0 auto;
+    border-radius: 0 0 15px 15px ;
+    background-color:white;
+    padding-left: 0;
+    position: fixed ;
+  }
+  .gnb li {
+    display: inline-block;    
+  }
+  .gnb a {
+    text-decoration: none;
+    text-align: center;
+    color: white;
+
+    background-color: brown;
+    padding: 5px 20px;
+  }
+  .box1 {
+    background-color: aquamarine;
+  }
+  .article {
+    text-align: center;
+    font-size: 50px;
+    padding: 500px;
+
+  }
+  #article1 {
+    background-color: blueviolet;
+    color: white;
+  }
+  #article2 {
+    background-color: darksalmon;
+  }
+  #article3 {
+    background-color: indigo;
+    color: white;
+  }
+  #article4 {   
+     background-color: palevioletred;
+  }
+  .gnb .box1 {
+    background-color: darkorange;
+  }
+  .gnb .box2 {
+    background-color: darkgoldenrod;
+  }
+  .gnb .box3 {
+    background-color: hotpink;
+  }
+  .gnb .box4 {
+    background-color: tomato;
+  }
+  </style>
+</head>
+<body>
+  <menu class="gnb">
+    <li><a href="#article1" class="bg-1">sec1</a></li>
+    <li><a href="#article2" class="bg-2">sec2</a></li>
+    <li><a href="#article3" class="bg-3">sec3</a></li>
+    <li><a href="#article4" class="bg-4">sec4</a></li>
+  </menu>
+
+  <article class="article" id="bg-1" >article1</article>
+  <article class="article" id="bg-2" >article2</article>
+  <article class="article" id="bg-3" >article3</article>
+  <article class="article" id="bg-4" >article4</article>
+</body>
+</html>

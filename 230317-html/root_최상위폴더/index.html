@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>상대경로1</title>
+</head>
+<body>
+	<h1>index.html</h1>
+	<h2>상대 경로1</h2>
+	<p><strong>index.html</strong>은 모든 웹 문서의 첫 페이지로 약속됨.<br>
+		임의변경 불가</p>
+	<p>최상위 root 폴더 바로 아래 있는 index.html 문서만 첫페이지로 인식</p>
+
+	<!--
+	  상대경로:
+	  	현재 작업중인 문서 기준.
+	  	동일한 사이트 안에서의 이동시 사용.(내부이동)
+
+	  	기준 문서
+	  	ㄴ기준 파일과 같은 위치에 있는 파일로 이동: ./title.html 
+	  	혹은 title.html
+	  	ㄴ 기준 파일보다 하위 경로에 있는 파일로 이동: ./폴더명/title.html
+	  	혹은 폴더명/title.html
+	  	ㄴ 기준 파일보다 상위 경로에 있는 파일로 이동: ../title.html
+	-->
+
+	<ul>
+		<li>
+			<!--index.html 현재 기준 문서 -->
+			<a href="index.html">첫페이지(홈)으로 바로가기</a>
+		</li>
+			<!--현재 상대경로 기준은 index.html이기 때문에 파일명만 작성-->
+		<li><a href="./about.html">about.html 바로가기</a></li>
+		<li><a href="./contact.html">contact.html 바로가기<a/></li>
+		<li><a href="./css/style.html">style.html 바로가기<a/></li>
+		<li><a href="./images/photo.html">photo.html 바로가기<a/></li>
+		<li><a href="./images/interface.html">interface.html 바로가기</a></li>
+		<li><a href="./scripts/script.html">script.html 바로가기</a></li>
+	</ul>
+</body>
+</html>

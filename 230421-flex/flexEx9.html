@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>flexEx9</title>
+  <style>
+    h1 { text-align: center; }
+
+    .gallery { /* flex-container */
+      list-style: none; padding: 0;
+      margin: 0 auto;
+      border: 6px solid #000;
+      width: 80vw;
+
+      display: flex;
+      flex-flow: wrap;
+      /* gap:1rem; 열과 행에 들어가는 여백 */
+    }
+    .gallery li { /* flex-item */
+      margin: 1%;
+      width: 31.3333%;
+    }
+    .gallery li img { /* flex-item 아님 */
+      vertical-align: top;
+      width: 100%;
+    }
+    .gallery li h3 { /* flex-item 아님 */
+      background-color: #000; color:#fff;
+      margin: 0; text-align: center; text-transform: uppercase;
+      padding: 8px;
+    }
+  </style>
+</head>
+<body>
+  <h1>가로 세로 비율을 유지하는 반응형 박스</h1>
+  <ul class="gallery">
+      <li>
+        <img src="https://via.placeholder.com/300x200/FEE8B0/000?text=img+1">
+        <h3>Title1</h3>
+      </li>
+      <li>
+        <img src="https://via.placeholder.com/300x200/9CA777/fff?text=img+2">
+        <h3>Title2</h3>
+      </li>
+      <li>
+        <img src="https://via.placeholder.com/300x200/FFD3B0/000?text=img+3">
+        <h3>Title3</h3>
+      </li>
+      <li>
+        <img src="https://via.placeholder.com/300x200/FF6969/fff?text=img+4">
+        <h3>Title4</h3>
+      </li>
+      <li>
+        <img src="https://via.placeholder.com/300x200/EA8FEA/fff?text=img+5">
+        <h3>Title5</h3>
+      </li>
+      <li>
+        <img src="https://via.placeholder.com/300x200/FFAACF/fff?text=img+6">
+        <h3>Title6</h3>
+      </li>
+  </ul>
+</body>
+</html>

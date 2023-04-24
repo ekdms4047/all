@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>fluidLayput3쌤</title>
+  <style>
+     .container { background-color:gainsboro; width: 80vw; margin: 0 auto; font-weight: bold; font-size: 23px; }
+    .container .box::after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+    /* .container 에 clear fix 값 주면 다른 box 들은 높이값을 안먹음. 다 공통적으로 들어가 있는 .container .box 에 넣어줘야 2행,3행 다 높이값이 생김!! */
+    .container .box { border:3px solid #000; box-sizing: border-box;}
+    .container .box .item_col { height: 30vh;}
+    .container .item1 .item_col { background-color: #362FD9; }
+    .container .item2 .item_col { background-color: #3C84AB; float: left; width: 31.3333%; margin: 1%;}
+    .container .item3 .item_col { background-color: #85CDFD ; float: left; margin: 0.5vw;
+    width:calc(16.6666% - 1vw); }
+    /*
+      cals(); css 함수
+        다른 단위 값들끼리 연산이 가능 (+, -, /, *)
+        연산자 사이에는 반드시 띄어쓰기 필요
+    */
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box item1">
+      <div class="item_col">1행</div>
+    </div>
+    <div class="box item2">
+      <div class="item_col">2행1열</div>
+      <div class="item_col">2행2열</div>
+      <div class="item_col">2행3열</div>
+    </div>
+    <div class="box item3">
+      <div class="item_col">3행1열</div>
+      <div class="item_col">3행2열</div>
+      <div class="item_col">3행3열</div>
+      <div class="item_col">3행4열</div>
+      <div class="item_col">3행5열</div>
+      <div class="item_col">3행6열</div>
+    </div>
+  </div>
+</body>
+</html>

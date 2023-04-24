@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>list-style-type</title>
+  <style>
+   h1 ~ * { /* 일반 형제 선택자 */
+      text-transform: capitalize;
+    }
+    ol {
+      /* 머리말 기호 스타일 */
+      list-style-type: disc;
+      list-style-type: armenian;
+      list-style-type: upper-alpha;
+      list-style-type: lower-greek;
+    }
+    ul {
+      list-style-type: decimal-leading-zero;
+    }
+  </style>
+</head>
+<body>
+  <h1>리스트 스타일 타입 list-style-type</h1>
+  <h2>the complete poems</h2>
+  <ol>
+    <li>life</li>
+    <li>nature</li>
+    <li>love</li>
+    <li>time and eternity</li>
+    <li>the single hound</li>
+  </ol>
+  <ul>
+    <li>life</li>
+    <li>nature</li>
+    <li>love</li>
+    <li>time and eternity</li>
+    <li>the single hound</li>
+  </ul>
+</body>
+</html>

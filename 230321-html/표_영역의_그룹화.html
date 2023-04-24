@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>표 영역의 그룹화 </title>
+</head>
+<body>
+	<h1>표 영역의 그룹화</h1>
+	<table border="1">
+		<!--
+		<h2></h2> 테이블 태그와 관련 없는 태그는 쓸 수 없음.
+		table 태그 하위 요소로 반드시 table 태그와 함께 작성. caption만 단독으로 사용할 수 없음.(생략가능)
+		표의 목적에 대해 명확하고 상세한 설명을 제공.
+		-->
+		<caption>table 전용 캡션</caption>
+		 <!-- thead : 표 머리말(필수) -->
+		<thead>
+		<tr><!-- 1행 -->
+			<th></th>
+			<th>가정용 호스팅</th>
+			<th>기업용 호스팅</th>
+		</tr>
+		</thead>
+		 <!-- tbody : 표 본문(필수) -->			
+		<tbody>		
+		<tr><!-- 2행 -->
+			<th>디스크 공간</th>
+			<td>1GB</td>
+			<td>100GB</td>
+		</tr>
+		<tr><!-- 3행 -->
+			<th>대역폭</th>
+			<td>5GB / 월</td>
+			<td>50GB / 월</td>
+		</tr>
+		<tr><!-- 4행 -->
+			<th>이메일 계정</th>
+			<td>5</td>
+			<td>10</td>
+		</tr>
+		<tr><!-- 5행 -->
+			<th>서버</th>
+			<td>공유</td>
+			<td>가상서버호스팅(VPS)</td>
+		</tr>
+		<tr><!-- 6행 -->
+			<th>지원방법</th>
+			<td>이메일</td>
+			<td>전화와 이메일</td>
+		</tr>
+		</tbody>
+		 <!-- tfoot : 표 바닥글(생략 가능) -->			
+		<tfoot>
+		<tr><!-- 7행 -->
+			<th colspan="3">지급 가입하면 10% 할인!</th>
+		</tr>
+		</tfoot>
+	</table>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>원형그라디언트radial-gradient</title>
+</head>
+<style>
+  h1 {
+      text-align: center;
+    }
+    .container {
+      list-style: none;
+      padding: 0;
+      margin: 0 auto;
+      background-color: #ddd;
+      font-weight: bold;
+      font-size: 20px;
+      overflow: hidden;
+    }
+    .container .box {
+      border: 3px solid #000;
+      width: 80%; 
+      min-width: 400px;
+      height: 200px;
+      margin: 10px auto;
+    }
+    .box1 {
+      background-image: radial-gradient(brown, #222);
+    }
+    .box2 {
+      background-image: radial-gradient(brown,yellow,#222);
+    }
+    .box3 {
+      background-image: radial-gradient(yellow 10%, brown 70%);
+    }
+    .box4 {
+      /* circle 영역의 비율과 상관없이 정원의 형태로 그라이언트 생성 */
+      background-image: radial-gradient(circle, yellow, brown);
+    }
+    .box5 {
+      background-image: radial-gradient(circle, rgb(145, 145, 74) 50%, brown 80% );
+    }
+    .box6 {
+      /* closest-side at 10& 80& lift에서 10% top에서 80%만큼 이동해서 생성 */
+      background-image: radial-gradient(circle closest-side at 10% 80%, pink, blue);
+    }
+    .box7 {
+      background-image: repeating-radial-gradient(circle, pink 0, blue 20%);
+    }
+    .box8 {
+      background-image: repeating-radial-gradient(circle, pink,
+      pink 40px, blue 40px, blue 80px);
+    }
+</style>
+<body>
+  <h1>원형 그라디언트 radial-gradient</h1>
+  <ul class="container">
+    <li class="box box1">1. radial-gradient(1색상,2색상)</li>
+    <li class="box box2">2. radial-gradient(1색상, 2색상, 3색상, 4색상)</li>
+    <li class="box box3">3. radial-gradient(1색상 위치%, 2색상 위치%)</li>
+    <li class="box box4">4. radial-gradient(circle, 1색상, 2색상)</li>
+    <li class="box box5">5. radial-gradient(circle, 1색상 위치%, 2색상 위치%)</li>
+    <li class="box box6">6. radial-gradient(circle closest-side at 위치, 1색상, 2색상)</li>
+    <li class="box box7">7. repeating-ridial-gradient(1색상 %, 2색상 %)</li>
+    <li class="box box8">8. repeating-ridial-gradient(1색상, 2색상)</li>
+  </ul>
+</body>
+</html>

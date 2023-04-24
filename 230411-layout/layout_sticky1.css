@@ -1,0 +1,29 @@
+@charset "utf-8";
+body {
+  color: #fff;
+  margin: 0;
+}
+header {
+  background-color: darkblue; 
+  overflow: hidden;
+  width: 100%;
+}
+header h1 {
+  margin: 0;
+}
+article {
+  background-color:darkmagenta;
+  width: 70%; height: 200px;
+  float: left;
+}
+aside {
+  background-color: darksalmon;
+  position: sticky;
+  width: 30%; height: 200px;
+  float: left;
+}
+footer {
+  background-color: darkblue;
+  clear: both;
+  width: 100%; height: 100px;
+}

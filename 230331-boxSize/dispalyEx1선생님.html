@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>displayEX1</title>
+  <style>
+    .gnb {
+     /* background-color: darkgray; */
+      padding-left: 0;
+      text-align: center;
+    }
+    .gnb li {
+      display: inline-block;
+    }
+    .gnb li a {
+      text-decoration: none;
+      color: inherit;  /* 상속 */
+      background-color: blueviolet;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 20px;
+
+      border: 1px solid #000;
+      padding: 4px 12px;
+      margin: 0 10px;
+      display: block;
+    }
+
+    .gnb li a:hover{
+      background-color: coral;
+      color: white;
+
+    }
+  </style>
+</head>
+<body>
+  <h1>display 연습1</h1>
+  <ul>
+    <li>마우스를 올리면 글자색과 배경색 변경</li>
+    <li>중앙 정렬</li>
+  </ul>
+
+  <menu class="gnb">
+    <li><a href="#">menu1</a></li>
+    <li><a href="#">menu2</a></li>
+    <li><a href="#">menu3</a></li>
+    <li><a href="#">menu4</a></li>
+  </menu>
+</body>
+</html>

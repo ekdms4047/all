@@ -1,0 +1,91 @@
+@charset "utf-8";
+
+/* Lobster Two, 'Alkatra', cursive; */
+
+@import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@500&family=Lobster+Two&family=Merriweather:wght@300&family=Noto+Sans+KR:wght@400;700&display=swap');
+
+   main {
+    height: 3000px;
+    padding-top: 200px;
+    font-weight: bold;
+    font-size: 50px;
+  }
+  a {
+    text-decoration: none;
+  }
+  menu {
+    list-style: none;
+  }
+  li {
+    display: inline-block;
+  }
+
+  /***** header *****/
+  header {
+    background-color:#D4447A ;
+    font-family: 'Noto sans KR', '맑은 고딕', 돋움, sans-serif;
+    font-weight: 400;
+    text-align: center;
+
+    max-width:1240px ; min-width: 900px;
+    height: 110px;
+    position: fixed;
+    top:0;
+    left: 0; right: 0;
+    margin:auto;
+  }
+  /* 로고 */
+  header h1 {
+    background-color: #F6F54F;
+    font-weight: 700;
+    font-size: 30px;
+    width:150px ; height:60px ;
+    line-height: 60px;
+
+    position: absolute;
+    left: 10px; bottom: 10px;
+  }
+  header h1 a {
+    color:#D4447A;
+  }
+
+  /* 유틸 */
+  header .utill {
+    background-color:#F6F54F;
+    position: absolute;
+    right:10px ; top:0;
+    padding: 2px 4px;
+  }
+  header .utill li {
+    color:#222;
+    font-size: 11px;
+    vertical-align: middle;
+    padding: 0 4px;
+    }
+  header .utill a {
+  color:#222;
+  font-size: 16px;
+  }
+  header .utill a:hover {
+    color:#D4447A;
+  }
+  header .gnb {
+    font-family:'Lobster Two','Times New Roman', Times, serif ;
+    background-color:blueviolet;
+    padding-left: 0; margin: 0;
+    position: absolute;
+    right: 10px; bottom: 14px; 
+    
+
+  }
+  header .gnb li a {
+    text-transform: capitalize;
+    color:white;
+    font-size: 26px;
+    display: block;
+    padding: 10px 30px;
+  }
+  header .gnb li a:hover {
+    background-color:white;
+    color:#222;
+  }

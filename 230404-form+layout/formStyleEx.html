@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>form style ex</title>
+  <style>
+    form {
+      background-color: brown;
+      padding: 10px 10px;   
+      margin: 0 10px auto;
+    }
+    legend {
+      background-color: darkslategrey;
+      padding: 3px 15px;
+      color: aliceblue;
+      text-align: left;
+    }
+    fieldset {
+      margin: 50px 50px;
+      background-color: white;
+      border-radius: 15px;
+      border:2px solid #222;
+      padding: 15px 30px;
+      text-align: right;
+    }
+    p {
+      text-align: center;
+      padding: ;
+    }
+    text {
+      empty-cells:inherit;
+    }
+
+  </style>
+</head>
+<body>
+  <!--
+    텍스트 필드: 마우스 이벤트
+    ㄴ기본일 때는 border-bottom 만 있고
+    ㄴ마우스를 올렸을 때는 border 전부가 있고
+    ㄴ클릭 했을 때는 배경색
+  -->
+  <form>
+    <fieldset>
+      <legend>회원가입</legend>
+          <label for="userName" >이름:</label>
+          <input type="email" name="userEmail" id="userEmail"><br>
+
+          <label for="userEmail">이메일:</label>
+          <input type="email" name="userEmail" id="userEmail"><br>
+        
+          <button type="submit">가입</button>
+          <button type="reset">취소</button>      
+    </fieldset>
+  </form>
+</body>
+</html>

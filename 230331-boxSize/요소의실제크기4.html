@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>요소의 실제 크기 4</title>
+</head>
+<style>
+  /*
+    가로300 세로150
+    바깥 여백 위 20, 바깥 여백 왼쪽40, 바깥 여백 오른쪽20
+    안쪽 여백 위 10, 안쪽 여백 오른쪽 30
+    테두리 위 10, 테두리 아래 5
+  */
+  .box {
+    width: 300px; height: 150px;
+    margin: 20px 20px 0px 40px;
+    padding: 10px 30px 0 0;
+    border-top: 10px solid #222;
+    border-bottom: 5px solid #222;  
+    }
+</style>
+<body>
+  <h1>요소의 실제 크기 4</h1>
+  <div class="box">
+    <p>너비: w300+m(20+40)+p(30+0)+b(0) = 390px</p>
+    <p>높이: h150+m(20+0)+p(10+0)+b(10+5) = 195px</p>
+  </div>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>flexEx4</title>
+  <style>
+      1 방법
+      body {margin: 0;}
+      .container {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+    }
+    
+    body {margin: 0;}
+    .container {
+      display: flex;
+    }
+    .container footer {
+      background-color: #181D31; color:#fff;
+      width: 1600px; /* 1600/1920*100 = 83.333vw */
+      width: 83.333vw;
+      /* margin: 0 auto; 부모 요소에 flex가 적용되어 있으면 작동x */
+      padding: 30px; /* 30/999*100 = 3.003 */
+      padding: 3vh;
+    
+    /* align-self : flex-end; 2 방법*/
+
+    /* 부모 요소에 플렉스 적용시 자식 아이템은 margin을 통해 개별적으로 위치 지정 가능.
+    더 섬세하게 조정 가능 */
+      /* margin:auto;  center center */
+      /* margin-left: auto; 여백이 왼쪽으로 들어가기 때문에 아이템은 오른쪽 배치 */
+      /* margin-right:auto; 여백이 오른쪽으로 들어가기 때문에 아이템은 왼쪽 배치 */
+      /* margin-bottom:auto; 여백이 아래쪽으로 들어가기 때문에 아이템은 위쪽 배치*/
+      /* margin-top:auto; 여백이 위쪽으로 들어가기 때문에 아이템은 아래쪽 배치*/
+      margin: 5em auto auto 2em;
+      margin: auto auto 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <footer>
+      <h2>바닥글</h2>
+      <p>곳이 몸이 그들의 행복스럽고 피어나는 열매를 있는 길지 열락의 듣는다. 꽃이 곳으로 생명을 피가 봄바람이다. 사랑의 못할 불어 피가 고행을 미묘한 무엇을 할지니, 있으랴? 열매를 있을 피가 끓는 구하지 것이 부패뿐이다. 열락의 능히 인도하겠다는 목숨을 기쁘며, 풀이 굳세게 뛰노는 있는 위하여서.</p>
+    </footer>
+  </div>
+</body>
+</html>
+<!--
+  다은
+    .container { width: 80vw; height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-end;
+    margin-left: 50px;
+  }
+    .container footer {
+      background-color: #181D31; color:#fff; padding: 0 10px;
+      width: 90vw; height: 30vh;
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      justify-content: center;
+  }
+-->

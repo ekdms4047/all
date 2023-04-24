@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>table style Ex3</title>
+  <style>
+    h1 {
+      text-align: center;
+    }
+    table caption {
+     width: 220px;
+     background-color: blueviolet;
+     color: azure;
+     border-radius: 20px 20px 0 0;
+     padding: 7px 15px;
+    }
+    table {
+      margin: 25px auto;
+      border: 3px solid blueviolet;
+      padding: 3px 3px;
+    }
+    table th, td {
+      border: 1.5px dashed blueviolet;
+    }
+    thead,tbody td {
+      text-align: center;
+    }
+    th {
+      padding: 2px 7px;
+    }
+   .box {
+    border-collapse: collapse;
+    }
+   .box2 {
+    width: 200px;
+    }
+  </style>
+</head>
+<body>
+  <h1>table style 연습 3</h1>
+  <table>
+    <caption>프로축구 경기 일정</caption>
+    <thead>
+    <tr>
+      <th>울산</th>
+      <td>울산 vs 인천</td> 
+    </tr>
+    <tr>
+      <th>부산</th>
+      <td>부산 vs 대전</td> 
+    </tr>
+    <tr>
+      <th>서울</th>
+      <td>서울 vs 강원</td> 
+    </tr>
+  </table>
+  </thead>
+  <table class="box">
+    <caption class="box2">프로축구 경기 일정</caption>
+     <tbody>
+        <tr>
+          <th>울산</th>
+          <td>울산 vs 인천</td> 
+        </tr>
+        <tr>
+          <th>부산</th>
+          <td>부산 vs 대전</td> 
+        </tr>
+        <tr>
+          <th>서울</th>
+          <td>서울 vs 강원</td> 
+        </tr>
+    </tbody>
+  </table>
+</body>
+</html>

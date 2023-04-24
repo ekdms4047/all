@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>선형그라디언트linear-gradient</title>
+  <style>
+    h1 {
+      text-align: center;
+    }
+    .container {
+      list-style: none;
+      padding: 0;
+      margin: 0 auto;
+      background-color: #ddd;
+      font-weight: bold;
+      font-size: 20px;
+      overflow: hidden;
+    }
+    .container .box {
+      border: 3px solid #000;
+      width: 80%; 
+      min-width: 400px;
+      height: 200px;
+      margin: 10px auto;
+    }
+    .box1 {
+      background-image: linear-gradient(#E944FC,#58DAFC);
+    }
+    .box2 {
+      background-image: linear-gradient(to bottom,(#219CFF),#D9981C);
+      background-image: linear-gradient(to top,#219CFF,#D9981C );
+      background-image: linear-gradient(to right,#219CFF,#D9981C );
+    }
+    .box3 {
+      background-image: linear-gradient(to right bottom,#FFFF38,#FD21FF);
+    }
+    .box4 {
+      background-image: linear-gradient(#92E9FC,#85D97E,#F0DF97,#DB957B);
+    }
+    .box5 {
+      background-image: linear-gradient(-125deg, #222,#DB957B,#58DAFC);
+    }
+    .box6 {
+      background-image: linear-gradient(85deg,#0593FF 30%, #DB4527 80%);
+    }
+    .box7 {
+      background-image: linear-gradient(transparent,#B6FF1F);
+      background-image: linear-gradient(#B6FF1F,transparent);
+      background-image: linear-gradient(35deg, #B6FF1F, transparent ,#222);
+    }
+    .box8 {
+      background-image: repeating-linear-gradient(#86FF 0, #FB6F 40px);
+    }
+    .box9 {
+      background-image: repeating-linear-gradient(#86ff 0, #86ff 40px, #B6FF1F 40px, #B6FF1F 80px);
+    }
+    .box10 {
+      background-image: repeating-linear-gradient(90deg,#B6FF1F 0,#B6FF1F 15%, #86ff 15%, #86ff 30%);
+    }
+    .box11 {
+      background-image: repeating-linear-gradient(90deg,#FFFE05 0, #FFFE05 20px, #C55EEF 20px, #C55EEF 60px, #CBFFA6
+      60px, #CBFFA6 70px);
+    }
+  </style>
+</head>
+<body>
+  <h1>선형 그라디언트 linear-gradient</h1>
+  <ul class="container">
+    <li class="box box1">1. background-image: linear-gradient(1색상,2색상)</li>
+    <li class="box box2">2. background-image: linear-gradient(방향, 1색상, 2색상)</li>
+    <li class="box box3">3. background-image: linear-gradient(방향, 1색상, 2색상)</li>
+    <li class="box box4">4. background-image: linear-gradient(1색상, 2색상, 3색상, 4색상)</li>
+    <li class="box box5">5. background-image: linear-gradient(방향, 1색상, 2색상, 3색상)</li>
+    <li class="box box6">6. background-image: linear-gradient(방향, 1색상 위치%, 2색상 위치%, 3색상 위치%)</li>
+    <li class="box box7">7. background-image: linear-gradient(transparent, 1색상)</li>
+    <li class="box box8">8. background-image: repeating-linear-gradient(방향, 색상 위치, 색상 위치)</li>
+    <li class="box box9">9. background-image: repeating-linear-gradient(1색상 0, 1색상 30px,2색상 30px, 2색상 60%)</li>
+    <li class="box box10">10. background-image: repeating-linear-gradient(1색상,2색상)</li>
+    <li class="box box11">11. background-image: repeating-linear-gradient(1색상,2색상)</li>
+  </ul>
+</body>
+</html>

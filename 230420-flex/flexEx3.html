@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>flexEx3</title>
+  <style>
+    body { margin: 0; font-size: 2em; font-weight: bold;}
+    /* 쌤
+      .container {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      background-color: bisque;
+    } 
+    */
+    .container header {background-color: #10A19D; height: 14vh;}
+    .container nav {background-color: #540375; padding: 1vh; height: 6vh;}
+    .container main { /* flex-container */
+      display: flex;
+      /* 교차축의 기본은 stretch이기 때문에 전체가 채워짐 */
+      height: 78vh; /* 100 vh - height 14vh - nav padding 2vh - nav heigh 6vh = 78vh */
+    }
+    .container aside {background-color: #FF7000; width: 30%;}
+    .container section {background-color: #FFBF00; width: 70%;}
+  /* 다은
+    body { margin: 0; font-size: 20px; font-weight: bold; color:#fff}
+    header {background-color: #10A19D ; height: 15vh;}
+    nav { background-color: #540375; height: 5vh; }
+    aside { background-color: #FF7000; }
+    article { background-color: #FFBF00; }
+    .box { 
+      display: flex;
+    }
+    .box aside {
+      height: 80vh; width: 30vw;
+    }
+    .box article {
+     width: 70vw; font-size: 40px;
+     display: flex;
+     flex-direction: column;  
+    }
+  */
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>header</header>
+    <nav>nav</nav>
+    <main>
+      <aside>aside</aside>
+      <section>section</section>
+    </main>
+  </div>
+  <!-- 다은
+    <header>header</header>
+    <nav>navigation</nav>
+  <div class="box">
+    <aside>aside</aside>
+    <article>content</article>
+  </div>
+  -->
+</body>
+</html>

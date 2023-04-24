@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>before+after</title>
+  <style>
+    p {
+      border: 1px solid #222;
+    }
+    p::before {
+      content: "설명: "; /* 생략 불가능 */
+      background-color: darkgray;
+    }
+    p::after {
+      content: ""; /* content 특성 자체는 생락할 수 없으나 ""안에 아무것도 작성하지 않는건 가능 */
+      background-color:skyblue;
+    }
+
+    ol .box1::before {
+      content:"https://google.com 주소: ";
+    }
+    ol .box2::before {
+      content:"https://naver.com 주소: ";
+      color:white;
+      background-color: rebeccapurple;
+      margin-right: 20px;
+      padding-right: 10px;
+    }
+    ol .box3::before {
+      content:"https://daum.net";
+      display: inline-block;
+      border-right:1px solid #222 ;
+      padding: 2px 6px;
+      margin: 6px;
+    }
+    ul .box1 {
+      position: relative; /* .box1::after의 기준값 */
+    }
+    ul .box1::after {
+      content: "";
+      display: inline-block;
+      width: 2px; height: 15px;
+      background-color:tomato;
+      margin-left: 20px; 
+      position: absolute;
+      top:0; bottom: 0; left: 50px;
+      margin: auto;
+    }
+    ul .box2::after {
+      content:"🐷";
+    }
+    ul .box3::after {
+      /* 값으로 작성되는 부분 ""은 텍스트 컨텐츠의 영역으로 코드값 적용 x */
+      content: "&lt";
+    }
+  </style>
+</head>
+<body>
+  <h2>:before, ::before</h2>
+  <p>기준 요소 안의 컨텐츠 영역 앞쪽에 적용. 의사 요소</p>
+  <ol>
+    <li class="box1">구글</li>
+    <li class="box2">네이버</li>
+    <li class="box3">카카오</li>
+  </ol>
+
+
+  <h2>:after, ::after</h2>
+  <p>기준 요소 안의 컨텐츠 영역 뒤쪽에 적용</p>
+  <ul>
+    <li class="box1">구글</li>
+    <li class="box2">네이버</li>
+    <li class="box3">카카오</li>
+  </ul>
+</body>
+</html>

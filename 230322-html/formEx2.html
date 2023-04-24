@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>form 연습 2</title>
+</head>
+<body>
+	<h1>form 연습 2</h1>
+	<table border="1">			
+		<caption>실습 예제</caption>
+		<tr><!-- 1행 -->
+			<th>학교</th>
+			<td colspan="2">
+				<input type="text" name="userName" id="userName">
+			</td>
+			<td>
+				<button type="submit">학교찾기</button>
+			</td>
+		</tr>
+		<tr><!-- 2행 -->
+			<th>담당학년</th>
+			<td colspan="3">
+				<select name="menu" id="menu1">
+					<option value="-">-</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>		
+				</select>
+				학년
+				<select name="menu" id="menu2">
+					<option value="-">-</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>	
+				</select>
+				반				
+		</tr>
+		<tr><!-- 3행 -->
+			<th>학교전화</th>
+			<td>
+				<select name="menu" id="menu3">
+					<option value="지역번호">지역번호</option>
+					<option value="031">031</option>
+					<option value="032">032</option>
+					<option value="02">02</option>
+				</select>
+			</td>
+			<td>-</td>
+			<td>
+				<input type="text" name="userName">
+			</td>	
+		</tr>
+		<tr><!-- 4행 -->
+			<th>휴대전화</th>
+			<td>010</td>
+			<td>-</td>
+			<td>
+				<input type="tel" name="userTel">
+			</td>
+		</tr>
+		<tr><!-- 5행 -->
+			<th rowspan="3">교사인증</th>
+			<td colspan="3"><button type="submit">파일 선택</button>선택된 파일 없음
+			</td>
+		</tr>
+		<tr><!-- 6행 -->
+
+			<td colspan="3">*교사 인증은 교육 행정 정보시스템 로그인 한 다음 화면 캡쳐해서 첨부해 주시면 됩니다.
+			</td>
+		
+		</tr>
+		<tr><!-- 7행 -->
+
+			<td colspan="3"><a href="https://naver.com" target="_blank">[{&lt;자세한 방법 보기&gt;}]</a>
+			</td>
+			
+		</tr>
+		<tr><!-- 8행 -->
+			<th rowspan="2">간단한 인사 및 소개</th>
+			<td colspan="3">
+				<textarea name="txtbox" id="txtbox" cols="20" rows="3">이곳에 작성하세요
+			</textarea>
+			</td>
+	
+		</tr>
+		<tr><!-- 9행 -->
+
+			<td colspan="3">간단한 인사 및 소개를 남겨 주시면 교내 사랑방 게시판에 자동 등록되어 집니다.</td>
+		
+		</tr>
+	</table>
+</body>
+</html>

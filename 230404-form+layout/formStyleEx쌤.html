@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>form style ex</title>
+  <!-- 안써도 되긴하는데 보완 관련 코드 연결임 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- CDN  (이 주소를 구글에 치면 폰트 명령어 나옴!)-->
+  <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
+
+  <style>
+  form {
+    font-family: 'Gowun Dodum', '맑은 고딕', 돋움, sans-serif;
+    background-color: dimgray;
+    max-width: 600px;
+    margin: 0 auto;
+    /* padding: 50px; */
+    overflow: hidden;
+  }
+  form fieldset {
+    border: 3px solid #222;
+    border-radius: 10px;
+    background-color: white;
+    width: 240px;
+    margin: 50px auto;
+    padding: 20px;
+    text-align: right;
+    /*
+      마진 상쇄 현상: 일반적인 흐름에서,
+      자식의 margin-top과 부모의 margin-top이 만나면 둘 중 큰 값이 부모에게 적용
+      해결 방법-> 부모 요소에 overflow:hidden; 적용
+    */
+  }
+  form legend {
+    text-align: left;
+    background-color:#222;
+    color: white;
+    padding: 2px 10px;
+  }
+  form input { /* input : 인라인임에도 불구하고 가로값을 먹는다 */
+    width: 160px;
+    outline: none; /* 크롬, 엣지, 웨일 등 모던 브라우저에서 생기는 현상으로 포커스
+    상태일 때 테두리 없앰 (마우스 커서를 클릭 했을때 선이 두꺼워진걸 지움!) */
+    padding: 2px; /* 커서의 위치를 변경! */
+    margin-bottom: 10px;
+    border: transparent 1px solid;
+    border-bottom-color: #222;
+    font-family: 'Gowun Dodum', '맑은 고딕', 돋움, sans-serif;
+  }
+  /*w160 p2+2 164*/
+  /* 속성(특성) 선택자: 요소[속성], 요소[속성=값], [속성] */
+  form input[type]:hover {
+    border: #000 1px solid;
+  }
+  [required]:focus {
+    background-color:aquamarine;
+  }
+ /* form input[name="userEmail"]:focus {
+    background-color: blueviolet;
+} */
+  form button {
+    font-family: 'Gowun Dodum', '맑은 고딕', 돋움, sans-serif;
+    background-color: tomato;
+    border: none;
+    color:aliceblue;
+    padding: 2px 14px;
+    cursor: pointer;
+  }
+  form button:hover {
+    background-color: cornflowerblue;
+  }
+  </style>
+</head>
+<body>
+  <!--
+    텍스트 필드: 마우스 이벤트
+    ㄴ기본일 때는 border-bottom 만 있고
+    ㄴ마우스를 올렸을 때는 border 전부가 있고
+    ㄴ클릭 했을 때는 배경색
+  -->
+  <form>
+    <fieldset>
+      <legend>회원가입</legend>
+      <label for="userName" >이름:</label>
+      <input type="text" name="useruserName" id="useruserName"required><br>
+
+      <label for="userEmail">이메일:</label>
+      <input type="email" name="userEmail" id="userEmail"><br>
+       
+      <button type="submit">가입</button>
+      <button type="reset">취소</button>      
+    </fieldset>
+  </form>
+  <!--
+    <button>
+      폼과 관련된 값을 서버로 전송할 때 사용
+      사용자와의 "상호작용"이 필요할 때 사용(값을 서버에 전송하고 그 결과를
+      사용자에게 피드백)
+
+    <a>
+      다른 페이지로의 이동이 필요할 때
+      페이지간의 이동 (더보기, 새창 띄우기, 서브 페이지, 외부 페이지 이동 등등)
+  -->
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>layout_sticky2</title>
+  <style>
+     body, h1, h2 {
+      margin: 0;
+      color: #fff;
+    }
+    .clearfix::after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+    header, footer {
+      background-color:orangered;
+      height: 100px;
+      padding: 20px;
+    }
+    main {
+      border: 10px solid #000;
+    }
+  
+    main aside {
+      background-color: darkmagenta;
+      height: 3000px;
+      width: 30%;
+      float: left;
+      padding: 20px;
+      box-sizing: border-box;
+      position: sticky;
+      top:0;
+    }
+    main article {
+      background-color: crimson;
+      height: 800px;
+      width: 70%;
+      float: left;
+      padding: 20px;
+      box-sizing: border-box;
+      font-size: 30px;
+      font-weight: bold;
+
+      position: relative;
+    }
+    main article .relative {
+      background-color: cadetblue;
+      float:left;
+      position: relative; /* relative와 float를 동시에 적용시 float 인식 */
+      /* top:20px; */
+    }
+    main article .fixed {
+      background-color: green;
+      float:left;
+      position: fixed; /* fixed와 float를 동시에 적용시 fixed 인식 */
+      top:180px; left: 150px;
+    }
+    main article .absolute {
+      background-color: blue;
+      float:left;
+      position: absolute;
+      top:20px; left: 220px; /* absolute와 float를 동시에 적용시 absolute 인식 */
+    }
+    main article .sticky {
+      background-color: firebrick;
+      float:left;
+      position: sticky; /* 부모 요소가 스크롤에 따라 화면 밖으로 넘어가면 함께 */
+      top:20px; left: 360px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>layout_sticky2</h1>
+    <h2>header</h2>
+  </header>
+  <main class="clearfix">
+    <article>
+      <div class="relative">relative</div>
+      <div class="fixed">fixed</div>
+      <div class="absolute">absolute</div>
+      <div class="sticky">sticky</div>
+    </article>
+    <aside>
+      <h2>aside</h2>
+    </aside>
+  </main>
+  <footer>
+    <h2>footer</h2>
+  </footer>
+</body>
+</html>

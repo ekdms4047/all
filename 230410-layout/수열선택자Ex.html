@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>수열선택자Ex</title>
+  <style>
+  .box {
+    margin: 20px auto;
+    padding: 0;
+    height: 50px; width: 810px;
+  }
+  .box p {
+    float: left;
+    width: 90px; height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background-color: darkgoldenrod;
+    border-right: none;
+    border-left: none;
+  }
+  .box p:nth-child(even) {
+    background-color: blueviolet;
+    color: white;
+  }
+  .box p:nth-of-type(4n+1) {
+    background-color: coral;
+  }
+  .box .left {
+    border-radius: 20px 0 0 20px;
+  }
+  .box .right {
+    border-radius: 0 20px 20px 0;
+  }
+  </style>
+</head>
+<body>
+    <div class="box">
+      <p class="left">1</p>
+      <p>2</p>
+      <p>3</p>
+      <p>4</p>
+      <p>5</p>
+      <p>6</p>
+      <p>7</p>
+      <p>8</p>
+      <p class="right">9</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>table 연습 4</title>
+  <style>
+    body {
+      background-color: darkcyan;
+      text-align: center;
+    }
+    table {
+      margin: 0 auto;
+      border-collapse: collapse;
+    }
+    table caption {/* 줘도 되고 안줘도 됨 */
+      background-color:darkgoldenrod;
+      color: azure;
+      font-weight: bold;
+      border-radius: 20px 20px 0 0 ;
+      padding: 6px 0;
+    }
+    table td {
+      border: 1px white solid;
+      color: azure;
+      width: 150px; height: 60px;
+      background-color: green;
+    }
+    table .line {
+      display: block;
+      font-size: 14px;
+    }
+    table td a {
+      color: white;
+      background-color: red;
+      text-decoration: none;
+    }
+    table .blank {
+      background-color: transparent;
+    }
+    table .footBg td {
+     height: 30px;
+     background-color: chocolate;
+     border-radius: 0 0 15px 15px;
+    }
+  </style>
+</head>
+<body>
+  <h1>table 연습 4</h1>
+  <table>
+    <caption>소 부위</caption>
+      <tbody>
+        <tr><!--1행-->
+          <td>소머리</td>
+          <td>목심</td>
+          <td>등심<span class="line">(살치살&middot;<a href="#">꽃등심</a>)</span></td>
+          <td>채끝살</td>
+          <td>우둔<span class="line">(홍두깨살)</span></td>
+        </tr>
+        <tr><!--2행-->
+          <td rowspan="4" class="blank"></td>
+          <td rowspan="2">앞다리<span class="line">(부채살)</span></td>
+          <td>갈비<span class="line">(안창살&middot;제비추리)</span></td>
+          <td>안심</td>
+          <td rowspan="2">설도<span class="line">(도가니살)</span></td>
+        </tr>
+        <tr><!--3행-->
+          <td colspan="2">양지<span class="line">(차돌박이&middot;우삼겹)</span></td>
+        </tr>
+        <tr><!--4행-->
+          <td>사태</td>
+          <td colspan="2" rowspan="2" class="blank"></td>
+          <td>사태<span class="line">(아롱사태)</span></td>
+        </tr>
+        <tr class="footBg"><!--5행-->
+          <td>우족</td>
+          <td>우족</td>
+        </tr>
+    </tbody>
+  </table>
+</body>
+<!--br로 줄바꿈을 하기보단 span을 써서 display:block 처리 하는게 좋음-->
+</html>

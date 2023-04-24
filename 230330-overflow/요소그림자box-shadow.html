@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>요소 그림자 box-shadow</title>
+  <style>
+    .container {
+      background-color:antiquewhite;
+      width: 950px;
+      margin: 50px auto;
+      padding-left: 0;
+    }
+    .container li {
+      background-color:yellowgreen;
+  
+      display: inline-block;
+      width: 150px; height: 150px;
+      margin: 20px;
+      vertical-align: top;
+    }
+    .container .box1 {
+      box-shadow: 10px 10px 10px 10px #000; /* x축 y축 번짐 확장거리 색상 */ 
+    }
+    .container .box2 { 
+      box-shadow: -10px -10px 10px red; /* x축 y축 번짐 색상 */
+    }
+    .container .box3 { 
+      box-shadow:10px 10px #000; /* x축 y축 색상 */
+    }
+    .container .box4 {
+      /* 그림자 중첩. 쉼표로 구분 */
+      box-shadow:
+      10px 10px 10px #d90429,
+      -10px -10px 30px brown,
+      0 0 30px red;
+    }
+    .container .box5 {
+      box-shadow: 0 0 30px #000 inset; /* x축 y축 번짐 확장거리 색상 내부그림자 */ 
+    }
+  </style>
+</head>
+<body>
+  <h1>요소 그림자 box-shadow</h1>
+  <ul class="container">
+    <li class="box1">x축 y축 번짐 확장거리 색상</li><li class="box2">x축 y축 번짐 색상</li><li class="box3">x축 y축  색상</li><li class="box4">x축 y축 번짐 색상</li><li class="box5">x축 y축 번짐 확장거리 색상 내부그림자</li>
+  </ul>
+</body>
+</html>
