@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>transEx3</title>
+  <style>
+    body { margin:0; font-size: 1.2rem; font-weight: bold; text-align: center; text-transform: capitalize; }
+    .main-menu {
+      list-style: none;
+      margin:0 auto; padding: 0;
+      background-color: #F6A21E;
+      width:80vw;
+      display: flex;
+    }
+    .main-menu li {
+      /* width: 25%; */
+      flex-grow: 1;
+    }
+    .main-menu a {
+      text-decoration: none;
+      color:inherit;
+      display: block;
+      padding: 8px 0;
+      position: relative;
+    }
+    .main-menu a::after {
+      content: "";
+      height: 100%; width:0;
+      background-color: rgba(222, 217, 62,0.5);
+      position: absolute;
+      bottom: 0; left:0;
+      transition: 0.3s;
+      opacity: 0;
+    }
+    .main-menu a:hover::after {
+      content: "";
+      width: 100%;
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+   <!-- 해당 메뉴에 마우스를 올리면 왼쪽에서 오른쪽으로 바 진행 -->
+   <menu class="main-menu">
+    <li><a href="#">menu1</a></li>
+    <li><a href="#">menu2</a></li>
+    <li><a href="#">menu3</a></li>
+    <li><a href="#">menu4</a></li>
+  </menu>
+</body>
+</html>

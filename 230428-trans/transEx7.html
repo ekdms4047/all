@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>transEx7</title>
+  <style>
+    h1 { text-align: center;}
+    .product { 
+      text-align: center; 
+      list-style: none; margin: 0; padding: 0;
+      border: 2px solid #000; background-color: #F87D09;
+      display: flex;
+      justify-content: center;
+      /* gap:1vw; 행과 열의 여백 */
+    }
+    .product li {
+      min-width: 10%;
+      margin: 1vw;
+      flex-basis: 400px;
+      overflow: hidden;
+      aspect-ratio: 1;
+    }
+    .product li img {
+      width: 100%;
+      vertical-align: top; /* + display:block */
+    }
+    .product li .txt-box {
+      background-color: rgba(0,0,0,0.8);
+      color:#fff;
+      transition: 0.4s;
+      padding: 1vw;
+      aspect-ratio: 1;
+    }
+    .product li .txt-box .desc {
+      width: 80%;
+      margin: 0 auto;
+    }
+    .product li .txt-box .price {
+      width: 80%;
+      margin: 10px auto 0;
+    }
+    /* 이벤트 */
+    .product li:hover .txt-box {
+      transform: translateY(-100%);
+    }
+  </style>
+</head>
+<body>
+  <h1>trans 연습 7</h1>
+  <!-- 아래에서 위로 올라오는 설명-->
+  <ul class="product">
+    <li>
+      <img src="./images/B005375015.jpg" alt="img1">
+      <div class="txt-box">
+        <h3>핸드폰 케이스1</h3>
+        <p class="desc">설명설명설명설명</p>
+        <p class="price">가격: 2억 5000만원</p>
+      </div>
+    </li>
+    <li>
+      <img src="./images/A005375015_01.jpg" alt="img2">
+      <div class="txt-box">
+        <h3>핸드폰 케이스2</h3>
+        <p class="desc">설명설명설명설명</p>
+        <p class="price">가격: 2억 5000만원</p>
+      </div>
+    </li>
+    <li>
+      <img src="./images/B005375015.jpg" alt="img3">
+      <div class="txt-box">
+        <h3>핸드폰 케이스3</h3>
+        <p class="desc">설명설명설명설명</p>
+        <p class="price">가격: 2억 5000만원</p>
+      </div>
+    </li>
+  </ul>
+</body>
+</html>

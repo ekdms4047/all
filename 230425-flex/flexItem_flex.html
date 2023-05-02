@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>flexItem_flex</title>
+  <style>
+      ul {
+      list-style: none; margin:10px; padding: 0; background-color: #ddd;
+      font-weight: bold; font-size: 1.2rem; text-align: center;
+      display: flex; width: 600px; height: 60px; color:#fff;
+      border: 6px solid #000;
+    }
+    ul li:nth-child(1) { background-color: #5F264A; flex-grow:1; }
+    ul li:nth-child(2) { background-color: #643A6B; flex-grow:1; }
+    ul li:nth-child(3) { background-color: #957777; flex-grow:2; }
+
+    /*
+    .box1 li { flex:0 1 auto; }  flex-grow, flex-shrink, flex-basi
+    .box2 li { flex:1 1 auto; }
+    .box3 li { flex:1 1 0; } = flex:1; = flex:1 1 ;
+    .box4 li { flex:2 1 100px; } = flex:2 100px; flex-grow 외 값은
+    생략시 기본값이 적용되나 flex-basis 값 생략은 auto가 아닌 0을 의미.
+    flex:none; == 0 0 auto 
+    */
+
+    .box2 li { flex-basis: auto;} /* 기본값. 아이템 컨텐츠 크기에 맞춰 grow 비율 설정 */
+    .box3 li { flex-basis: 0;} /* 컨텐츠 크기와 상관없이 고정 비율에 grow 설정*/
+    .box4 li { flex-basis: 100px;} /* 고정값 100px에 맞춰 grow 설정 */
+  </style>
+</head>
+<body>
+  <h1>flexItem: flex</h1>
+  <h2>flex-grow:0; flex-shrink:1; flex-basis:auto;</h2>
+  <ul class="box1">
+    <li>item1</li>
+    <li>2</li>
+    <li>flex-item3</li>
+  </ul>
+
+  <h2>flex-grow:1:1:2; flex-basis:auto;</h2>
+  <ul class="box2">
+    <li>item1</li>
+    <li>2</li>
+    <li>flex-item3</li>
+  </ul>
+
+  <h2>flex-grow:1:1:2; flex-basis:0;</h2>
+  <ul class="box3">
+    <li>item1</li>
+    <li>2</li>
+    <li>flex-item3</li>
+  </ul>
+
+  <h2>flex-grow:1:1:2; flex-basis:100px;</h2>
+  <ul class="box4">
+    <li>item1</li>
+    <li>2</li>
+    <li>flex-item3</li>
+  </ul>
+
+</body>
+</html>

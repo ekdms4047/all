@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>css변수</title>
+  <style>
+/* 전역 선언 */
+:root {
+  /* 설정시 사용자 지정 이름 */
+  --color: #D800A6;
+  --fontColor: #1A4D2E;
+  --fontSize: 1.2rem;
+  --bg:url(./images/fireworks.png);
+  --bg-main:url(./images/bicycle.png) no-repeat 50% /cover;
+  --noMargin:0;
+}
+
+/* 적용 */
+body {
+  margin: var(--noMargin);
+  background-image: var(--bg);
+}
+h1 {
+  margin: var(--noMargin);
+  color: var(--fontColor);
+  background-color: var(--color);
+}
+.bg {
+  width: 400px; height: 400px;
+  background: var(--bg-main);
+}
+
+/* 지역 선언 */
+ul {
+  /* 태그 안에서 변수 선언 하는 경우 이 태그 하위까지만 적용. */
+  --color:orange;
+  --font-size:1.1rem;
+  background-color: var(--color);
+}
+ul li {
+  font-size: var(--font-size-1);
+}
+dt {
+  /* dt는 ul의 하위가 아님 */
+  font-size: var(--font-size-1); /* 이 값은 적용 x */
+  background-color: var(--color);/* 전역으로 설정된 값 적용 */
+}
+  </style>
+</head>
+  <h1>css 변수 variable</h1>
+  <ul>
+    <li>사용자 지정 속성</li>
+    <li>사용자가 정의하는 속성과 값으로 재활용할 수 있는 임의의 값</li>
+    <li>공통으로 사용되는 값에 css 변수를 설정하여 코드의 반복 사용 줄임</li>
+  </ul>
+
+  <dl>
+    <dt>전역 설정</dt>
+    <dd>:root { --variable-name: value; }</dd>
+    <dd>:root { --variable: value; }</dd>
+  
+    <dt>지역 설정</dt>
+    <dd>{ --variable-name: value; }</dd>
+    <dd>지정된 요소와 하위 요소에서만 적용</dd>
+  
+    <dt>사용</dt>
+    <dd>property : var(--variable-name);</dd>
+    <dd>property : var(--variable);</dd>
+  </dl>
+
+<div class="bg"></div>
+</body>
+</html>

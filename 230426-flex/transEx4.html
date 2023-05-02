@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>transEx4</title>
+  <style>
+/*
+  input:focus{ 텍스트 필드에 포커스가 잡히면}
+  input:checked { 체크박스에 체크가 되면 }
+  input:disabled { 비활성 }
+
+  input{type=checkbox}:checked {}
+*/
+.slideUp {
+  width: 300px; height: 400px;
+  background-color: #8B1874; color:#fff;
+  transition: 1s;
+  overflow: hidden;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.block {
+  width: 500px; height: 100px;
+  background-color: #FC4F00; color: #fff;
+}
+input{name:"check"}:checked ~ .slideUp {
+  /* visibility: hidden; */
+  /* opacity: 0; 사용자 눈에만 보이지 않음. 영역은 그대로 남음. 투명도 조절가능.
+  transifion 영향을 받음 */ 
+  /* display: none; 브라우저 영역에서 사라지며 코드창에서만 확인. 레이아웃에
+  영향을 줌. transition 영향을 받지 않음 */
+  height: 0;
+  padding: 0;
+}
+  </style>
+</head>
+<body>
+  <h1>trans 연습 4</h1>
+  <input type="checkbox" name="check" id="check">
+  <label for="check">체크 박스가 체크되면 박스가 위로 올라와 사라집니다.</label>
+  <div class="slideUp">
+    <h2>:checked</h2>
+    <p>청춘 가치를 끓는 미인을 이것이다. 밥을 우리는 새 부패를 이상은 끓는다. 그들은 과실이 풍부하게 귀는 앞이 속에 웅대한 꽃이 가치를 것이다. 열락의 전인 품었기 품고 커다란 유소년에게서 고행을 물방아 생의 뿐이다. 가는 하였으며, 전인 수 풀이 이것이다. 피부가 구하기 뜨거운지라, 대한 교향악이다. 붙잡아 능히 피가 말이다.</p>
+  </div>
+  <div class="block">block</div>
+</body>
+</html>

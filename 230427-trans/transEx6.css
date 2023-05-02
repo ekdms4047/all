@@ -1,0 +1,72 @@
+@charset "utf-8";
+
+body { 
+  background: linear-gradient(#9E6F21,#FFEEB3)
+  no-repeat 50% / cover; 
+  height: 100vh;
+}
+.profile-box {
+  min-width: 400px;
+  max-width: 500px;
+  background-color: #fff;
+  margin: 50px auto;
+  box-shadow:  
+  2.8px 2.8px 2.2px rgba(0, 0, 0, 0.014),
+  6.7px 6.7px 5.3px rgba(0, 0, 0, 0.021),
+  12.5px 12.5px 10px rgba(0, 0, 0, 0.027);
+
+  position: relative;
+  overflow: hidden;
+}
+.profile-box .txt-box {
+  width: 48%;
+  padding: 20px;
+}
+.profile-box .txt-box h2 {
+  font-family: 'Bebas Neue', cursive;
+  border-bottom: 1px solid #000;
+}
+.profile-box .txt-box .sns-group {
+  list-style: none; padding: 0; margin: 0;
+  display: flex;
+  align-items: flex-end;
+}
+.profile-box .txt-box .sns-group a{
+  color:inherit;
+  display: block; 
+  margin-right: 16px;
+}
+.profile-box .txt-box .sns-group a:hover {
+  color: red;
+}
+.profile-box .txt-box .sns-group .sns-icon {
+  font-size: 1.8rem;
+}
+.profile-box .txt-box .sns-group li:nth-child(1) .sns-icon {
+  font-size: 1.9rem;
+}
+/* profile */
+.profile-box h3 {
+  background-color: #000;
+  color:#fff;
+  font-style: oblique;
+  margin: 0; 
+  padding: 10px;
+}
+.profile-box .img-wrap {
+  border: 7px solid red;
+  border-radius: 50%;
+  width: 400px; height: 400px;
+  overflow: hidden;
+  background: url(./images/klipartz.com.png) no-repeat 50% 0/ 800px; /* 이미지에 있는 여백 때문에 사이즈 크게 함 원래 400px 하면 딱 맞아야 함 */
+
+
+  position: absolute;
+  top:50%; right: -40%;
+  transform: translateY(-50%);
+  transition: 0.3s;
+  
+}
+.profile-box:hover .img-wrap {
+  right: -33%;
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>transform_perspective</title>
+  <style>
+    section { display: flex; flex-wrap: wrap;}
+    section h2 { width: 100%; flex-shrink: 0; background-color: #ddd;}
+    section > div { width: 200px; height: 200px; background-color: tomato;
+    margin: 50px; font-weight: bold; font-size: 1.2rem; }
+    section > div > div {
+      width: 100%; height: 100%; background-color: orange;
+      transition: 0.6s;
+    }
+    /* prespective 값 적용 안함 */
+    .container1 .box1:hover .item1 { transform: translateX(50px); }
+    .container1 .box2:hover .item2 { transform: translateY(50px); }
+    .container1 .box3:hover .item3 { transform: translateZ(50px); }
+    /* translate, perspective 값 적용 */
+    .container2 .box1:hover .item1 { transform:perspective(200px)translateX(50px); }
+    .container2 .box2:hover .item2 { transform:perspective(200px)translateY(50px); }
+    .container2 .box3:hover .item3 { transform:perspective(200px)translateZ(50px); }
+    /* rotate, perspective 값 적용 */
+    .container3 .box1:hover .item1 { transform: perspective(200px) rotateX(45deg); }
+    .container3 .box2:hover .item2 { transform: perspective(200px) rotateY(45deg); }
+    .container3 .box3:hover .item3 { transform: perspective(200px) rotateZ(45deg); }
+  </style>
+</head>
+<body>
+  <h1>transform : perspective(); 원근감</h1>
+  <section class="container1">
+    <h2>perspective 값 적용 안함</h2>
+    <div class="box1">
+      <div class="item1">x축</div>
+    </div>
+    <div class="box2">
+      <div class="item2">y축</div>
+    </div>
+    <div class="box3">
+      <div class="item3">z축</div>
+    </div>
+  </section>
+  <section class="container2">
+    <h2>translate, perspective 값 적용</h2>
+    <div class="box1">
+      <div class="item1">x축</div>
+    </div>
+    <div class="box2">
+      <div class="item2">y축</div>
+    </div>
+    <div class="box3">
+      <div class="item3">z축</div>
+    </div>
+  </section>
+  <section class="container3">
+    <h2>rotate, perspective 값 적용</h2>
+    <div class="box1">
+      <div class="item1">x축</div>
+    </div>
+    <div class="box2">
+      <div class="item2">y축</div>
+    </div>
+    <div class="box3">
+      <div class="item3">z축</div>
+    </div>
+  </section>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>transitionEx2</title>
+  <style>
+    .container {
+      list-style: none; padding: 0; margin: 0;
+      border: 5px solid #000;
+      width: 70vw;
+      font-size: 1.5rem; font-weight: bold;
+    }
+    .container li {
+      background-color: #999;
+      height: 50px; width: 20px; margin: 5px; 
+      text-indent: -9999px;
+      transition-property: all;
+      transition-duration: 1s;
+    }
+    .container:hover li:nth-child(1){
+      background-color: #E02401;
+      width: 50%;
+      transition-timing-function: ease-in;
+    }
+    .container:hover li:nth-child(2){
+      background-color: #F78812;
+      width: 80%;
+      transition-timing-function: ease-in-out;
+    }
+    .container:hover li:nth-child(3){
+      background-color: #AB6D23;
+      width: calc(100% - 10px);
+      transition-timing-function: ease-in-out;
+    }
+    .container:hover li:nth-child(4){
+      background-color: #51050F;
+      width: 30%;
+      transition-timing-function: linear;
+    }
+    .container:hover li:nth-child(5){
+      background-color: #B71375;
+      width: 10%;
+    }
+  </style>
+</head>
+<body>
+  <h1>박스 영역 위에 마우스를 올리면 그래프 진행: 크기, 색상</h1>
+  <ul class="container">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+  </ul>
+</body>
+</html>

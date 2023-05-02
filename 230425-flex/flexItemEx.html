@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>flexEx</title>
+  <style>
+    body { 
+      margin: 0; font-size: 20px; font-weight: bold; color:#fff;
+    }
+    .container {
+      background-color: #ddd;
+      height: 100vh;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .container header {
+      background-color: #FF8474 ;
+      width: 100%; height: 15vh;
+    }
+    .container aside {
+      background-color:#9F5F80;
+      height: calc(100% - 15vh);
+      /* width: 30%; */
+      flex-basis: 0;
+      flex-grow: 3;
+    }
+    .container main {
+      background-color: #583D72 ;
+     /* width: 70%; */
+     flex-basis: 0;
+     flex-grow: 7;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>header</header>
+    <aside>aside</aside>
+    <main>content</main>
+  </div>
+</body>
+</html>

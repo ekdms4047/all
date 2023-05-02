@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>ani축약형</title>
+  <style>
+
+    .block {
+      background-color: #19A7CE;
+      width: 200px; height: 100px;
+      float: left;
+    }
+    .box {
+      float: left;
+      width: 200px; height: 200px;
+      line-height: 200px;
+      border-radius: 50%;
+      text-align: center; font-weight: bold; font-size: 1.2rem;
+      background-image: linear-gradient(#FEFF86,#146C94);
+      /* position: absolute; */
+      /*
+      animation-name: mov3;
+      animation-duration: 1s;
+      animation-delay: 0.5s;
+      animation-iteration-count: 3;
+      animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      animation-direction: alternate; 다시 돌아옴 
+      animation-fill-mode: forwards;
+      */
+      /* 순서에 상관없이 띄어쓰기로 구분, 두번째 나오는 s는 대기 시간으로 생략 가능 */
+      animation: mov3 1s 0.5s 3 cubic-bezier(0.68, -0.55, 0.265, 1.55)alternate forwards;
+    }
+    .box:hover {
+      animation-play-state: paused; /* 일시 멈춤 running 실행 */
+    }
+    .box p {
+      margin: 0;
+    }
+  @keyframes mov1 {
+    0% {
+      left: 0%;
+    }
+    100% {
+      background-image: linear-gradient(#EBC7E6,#DEDEA7);
+      transform: rotate(360deg);
+      left: 90%;
+    }
+  }
+  @keyframes mov2 {
+    100% {
+      margin-left: 70vw;
+    }
+  }
+  @keyframes mov3 {
+    100% {
+      transform: translateX(80vw) rotate(360deg) ;
+    }
+  }
+  </style>
+</head>
+<body>
+  <h1>ani축약형</h1>
+  <div class="box">
+    <p>축약형</p>
+  </div>
+  <div class="block">block</div>
+</body>
+</html>

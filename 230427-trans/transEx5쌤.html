@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>transEx5</title>
+  <style>
+    body { margin:0; text-align: center; }
+    .box { height: 300vh; width:100%; background-image: linear-gradient(#B2A4FF 50%, #FFB4B4); font-weight: bold; font-size: 3rem; }
+
+    nav {
+      background-color: #E56997;
+      width: 200px; height: 100%;
+
+      position: fixed;
+      top:0;
+      /* left: -150px; */
+      transition: 0.4s;
+      transform: translateX(-150px);
+    }
+    nav:hover {
+      /* left:0; */
+      transform: translateX(0);
+    }
+    nav:hover .menu-icon svg {
+      transform: rotate(180deg);
+      fill: #fff;
+    }
+
+    /* icon */
+    nav .menu-icon {
+      position: absolute;/* 부모 요소에 fixed 기준 */
+      right:0; top:10px;
+    }
+    nav .menu-icon svg {
+      width: 50px;
+      cursor: pointer;
+      fill: rgba(0,0,0,.8);/* svg 면색 */
+    }
+
+    /* menu */
+    nav .menu { list-style: none; padding:0; margin-top:100px }
+    nav .menu a { font-size: 1.3rem; text-decoration: none; color:inherit; display: block; font-weight: bold; padding:10px; }
+    nav .menu a:hover { background-color: #fff; }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="menu-icon">
+      <!-- <img src="./images/menu.svg" alt="menu icon"> -->
+      <svg viewBox="0 96 960 960">
+        <path d="m375 816-43-43 198-198-198-198 43-43 241 241-241 241Z"/>
+      </svg>
+    </div>
+
+    <menu class="menu">
+      <li><a href="#">menu1</a></li>
+      <li><a href="#">menu2</a></li>
+      <li><a href="#">menu3</a></li>
+      <li><a href="#">menu4</a></li>
+    </menu>
+  </nav>
+
+  <div class="box">box</div>
+</body>
+</html>
