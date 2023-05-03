@@ -1,0 +1,14 @@
+@charset "utf-8";
+/* cssVariable.css */
+:root {
+  --font-en: 'Abril Fatface', -apple-system,BlinkMacSystemFont,"Malgun Gothic","맑은 고딕",helvetica,"Apple SD Gothic Neo",sans-serif;
+
+  --font-ko:'Noto Sans KR', -apple-system,BlinkMacSystemFont,"Malgun Gothic","맑은 고딕",helvetica,"Apple SD Gothic Neo",sans-serif;
+
+  --italic: italic;
+  --point-color: #000;
+  --h1-size:8rem;
+  --h2-size:3rem;
+  --margin-basic:10%;
+  --margin-btn:5vw;
+}

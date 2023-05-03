@@ -1,0 +1,107 @@
+@charset "utf-8";
+
+/*
+font-family: 'Abril Fatface', cursive;
+font-family: 'Noto Sans KR', sans-serif;
+*/
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Noto+Sans+KR:wght@300&display=swap');
+
+/* css 변수 선언 */
+@import url(./cssVariable.css);
+
+/* common */
+@import url(./common.css);
+
+
+/* header { 
+  background-color: orange;
+}*/
+header h1 {
+  font-size: var(--h1-size);
+  font-weight: 500;
+}
+header p {
+  width: 80%;
+  /* background-color: #ddd; */
+}
+
+/* section */
+section {
+  display: flex;
+  justify-content: center;
+}
+section:nth-child(even){
+  background-color: #F6F1F1;
+}
+section .txt-box {
+ /* flex:36; */
+  width: 36%;
+  padding: 4%;
+  margin: auto;
+}
+section h2 {
+  font-size: var(--h2-size);
+}
+section .bg-box {
+   /* flex:64; */
+  width: 64%;
+  aspect-ratio: 64/50;
+  /* height: 36vw; */
+  text-indent: -9999px;
+  background: url(./image/unsplash1.jpg)no-repeat 50%/cover;
+}
+.box2 {
+  flex-direction: row-reverse;
+}
+.box2 .bg-box {
+  background-image: url(./image/unsplash2.jpg);
+}
+
+section .inner-box {
+  width: 40%;
+  margin: 0 var(--margin-btn);
+}
+section .inner-box p {
+  margin: 30px 0 0;
+}
+
+/* footer */
+footer h2 {
+  font-size: var(--h1-size);
+}
+form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+form input[type=email] {
+  flex:1;
+  margin-right:20px;
+  border:1px solid #767671;
+  border-radius: 30px;
+  background-color: transparent;
+  padding: 12px 26px ;
+  font-size: 1.1rem;
+  font-family: var(--font-ko);
+}
+footer .sns-group {
+  display: flex;
+}
+footer .sns-group li:hover {
+  transform: translateY(-10px);
+}
+footer .sns-group li a {
+  border: 3px solid #767671;
+  border-radius: 50%;
+  margin: 0 10px;
+  width: 80px; height: 80px;
+  display: flex;
+  justify-content: center; align-items: center;
+}
+footer .sns-group li:first-child a svg {
+  width: 30%;
+}
+footer .sns-group li a svg {
+  width: 46%;
+  fill: #767671;
+}
