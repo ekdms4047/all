@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>sprite</title>
+    <style>
+      h3 {
+        background: url(./naver.png) no-repeat 0 -316px;
+        text-indent: -9999px;
+        width: 442px;
+        height: 105px;
+        border: 2px solid #000;
+      }
+      .upTo {
+        position: fixed;
+        bottom: 50px;
+        right: 30px;
+        width: 92px;
+        height: 93px;
+        background: url(./naver.png) no-repeat -411px -424px;
+        text-indent: -9999px;
+        /* border: 2px solid #000; */
+      }
+      .upTo:hover {
+        background: url(./naver.png) no-repeat -305px -424px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>image sprite</h1>
+    <h2>여러 개의 이미지를 하나의 이미지로 합쳐 배경 이미지로 사용</h2>
+    <h3>네이버</h3>
+    <a href="#" class="upTo">위로 가기</a>
+  </body>
+</html>

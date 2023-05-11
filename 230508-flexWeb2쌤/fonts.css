@@ -1,0 +1,41 @@
+@charset "utf-8";
+
+/* 'Play', sans-serif; */
+@import url("https://fonts.googleapis.com/css2?family=Play:wght@700&display=swap");
+
+/* 'Spoqa Han Sans Neo', sans-serif;*/
+@font-face {
+  font-family: "Spoqa Han Sans Neo";
+  src: url("../assets/fonts/SpoqaHanSansNeo-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Spoqa Han Sans Neo";
+  src: url("../assets/fonts/SpoqaHanSansNeo-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Spoqa Han Sans Neo";
+  src: url("../assets/fonts/SpoqaHanSansNeo-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Spoqa Han Sans Neo";
+  src: url("../assets/fonts/SpoqaHanSansNeo-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Spoqa Han Sans Neo";
+  src: url("../assets/fonts/SpoqaHanSansNeo-Thin.woff2") format("woff2");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}

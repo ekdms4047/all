@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>flex web2</title>
+    <!-- favicon -->
+    <!-- og -->
+    <!-- reset -->
+    <link rel="stylesheet" href="../common/reset.css" />
+    <!-- fonts -->
+    <link rel="stylesheet" href="./fonts.css" />
+    <!-- icon -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,200,0,0"
+    />
+    <!-- style 내가 작성한 css는 제일 마지막에 넣어야 됨 !! -->
+    <link rel="stylesheet" href="./style.css" />
+
+    <!-- kakao map js -->
+    <script
+      type="text/javascript"
+      src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=	516aebb7a22a66ba7ef7d464d649e3a3"
+    ></script>
+  </head>
+  <body>
+    <!-- header -->
+    <header>
+      <!-- header-wrapper max-width:1900px; min-width:1200px; -->
+      <div class="header-wrapper flex">
+        <h1>pan star</h1>
+        <menu class="global-nav flex">
+          <li><a href="#">팬스타 소개</a></li>
+          <li><a href="#">사업분야</a></li>
+          <li><a href="#">고객지원</a></li>
+          <li><a href="#">미디어센터</a></li>
+          <li><a href="#">인재채용</a></li>
+        </menu>
+        <ul class="global-utill flex">
+          <li>
+            <a href="#"><span class="lower-case">e</span> shipping</a>
+          </li>
+          <li><a href="#">family site</a></li>
+          <li><a href="#">kor</a></li>
+        </ul>
+      </div>
+    </header>
+    <!-- 장식적인 이미지는 bg 이미지로, 정 안되면 img 태그
+    bgi가 img 보다 더 빨리 불러올 수 있음.-->
+    <!--이미지 스프라이트: 여러가지 이미지를 하나의 이미지로 합쳐서 관리하는 이미지를 의미함.
+    -->
+    <!-- contents -->
+
+    <article class="main-video">
+      <!-- "https://www.youtube.com/embed/videoID?옵션1&옵션2&loop=1&autoplay=1&mute=1 -->
+      <iframe
+        src="https://www.youtube.com/embed/IbKdRZA8NOM?controls=0&loop=1&autoplay=1&mute=1"
+        title="panstar"
+        class="youtube"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+      ></iframe>
+      <div class="main-video-text">
+        <h2><span>OVER THE NETWORK</span>CREATE NEW VALUES</h2>
+        <p>
+          고객을 위한 새로운 가치를 만들어 가기 위해<br />팬스타는 먼저 생각하고
+          먼저 움직입니다
+        </p>
+      </div>
+      <ul class="main-widget">
+        <li>
+          <a href="#">국제특송<br />예약/조회</a>
+        </li>
+        <li>
+          <a href="#">팬스타크루즈<br />예약/조회</a>
+        </li>
+      </ul>
+    </article>
+
+    <article class="glance">
+      <h2>At a Glance</h2>
+      <p>
+        해운과 물류를 넘어 네트워크를 통해 새로운 가치를 창조해 가는 팬스타
+        팬스타의 도전과 혁신은 오늘도 계속되고 있습니다.
+      </p>
+      <ul class="glance-list flex">
+        <li>
+          <h3><strong>31</strong> YEARS</h3>
+          <h4>팬스타 창립 31주년</h4>
+          <p>SINCE 1990. 07. 12</p>
+        </li>
+        <li>
+          <h3><strong>1,525,241</strong> 명</h3>
+          <h4>팬스타 오사카 크루즈페리</h4>
+          <p>부산-오사카 총 승객수</p>
+        </li>
+        <li>
+          <h3><strong>40</strong> HOURS</h3>
+          <h4>팬스타코리아랜드브릿지</h4>
+          <p>한-중-일 리드타임</p>
+        </li>
+        <li>
+          <h3><strong>439</strong> 항차</h3>
+          <h4>연안 & 국제 크루즈</h4>
+          <p>정통 크루즈 운항 횟수</p>
+        </li>
+      </ul>
+    </article>
+
+    <article class="business">
+      <h2>Business Area</h2>
+      <p>
+        <span class="block-line"
+          >팬스타는 무한한 가능성의 바다에서 최초의 길을 만들어 왔습니다.</span
+        >그리고 이제 고객을 위한 최고를 만들어 갑니다.
+      </p>
+      <div class="business-wrapper flex">
+        <div class="business-text">
+          <ul class="business-menu flex">
+            <li><a href="#" class="active">고속화물페리</a></li>
+            <li><a href="#">크루즈 여객</a></li>
+            <li><a href="#">국제특송</a></li>
+            <li><a href="#">자동차정비기기</a></li>
+            <li><a href="#">친환경 선박기술</a></li>
+            <li><a href="#">창고보관</a></li>
+          </ul>
+          <h3>고속화물페리</h3>
+          <p>
+            팬스타는 고속 Ro-Ro 페리를 이용한 해상운송으로 신속한 선적 및 하역,
+            내륙운송, 현지 통관면허를 보유하고 있는 일본 현지법인을 통해
+            일관해상운송체계를 구축 해상화물의 리드타임을 항공화물에 준하도록
+            단축시키면서 운송비용은 대폭 절감시켜 드립니다. 컨테이너화물은 물론
+            다양한 형태의 벌크화물, 건설장비/자재, 자동차 등 어떤 종류의
+            화물이라도 컨테이너없이 바로 선내에 선적하여 빠르고 안전한 운송을
+            보장합니다. 더 빠르게, 더 안전하게, 더 편리하게 팬스타
+            고속화물페리가 책임집니다.
+          </p>
+          <ul class="business-img-list flex">
+            <li>
+              <img
+                src="./images/mb_cargo_01.png"
+                alt="고속화물페리 앞쪽 모양"
+              />
+            </li>
+            <li>
+              <img
+                src="./images/mb_cargo_02.png"
+                alt="고속화물페리에 컨테이너가 들어가는 모습"
+              />
+            </li>
+            <li>
+              <img
+                src="./images/mb_cargo_03.png"
+                alt="컨테이너와 항구의 전경"
+              />
+            </li>
+          </ul>
+        </div>
+        <div class="business-img">
+          <img src="./images/mb_cargo.png" alt="고속화물페리 이미지" />
+        </div>
+        <a href="#" class="more-btn">more detail</a>
+      </div>
+    </article>
+
+    <article class="location">
+      <h2>Schedule</h2>
+      <p>
+        팬스타고속화물페리는 빠르고 안전함은 물론, 뛰어난 정시성을 자랑합니다.
+        주요 선박의 운항일정을 간편하게 확인해 보세요.
+      </p>
+      <ul class="location-list flex">
+        <li><a href="#" class="on">SANSTAR DREAM</a></li>
+        <li><a href="#">PANSTAR GENIE</a></li>
+        <li><a href="#">PANSTAR GENIE No.2</a></li>
+        <li><a href="#">PANSTAR DREAM</a></li>
+      </ul>
+      <div class="location-map" id="map">
+        <address>
+          <p>주소: 경기도 수원특례시 팔달구 세진브론즈빌 3F</p>
+          <p>연락처 : 031-1234-1234</p>
+        </address>
+        <a href="#" class="more-btn">more detail</a>
+      </div>
+    </article>
+
+    <article class="contact">
+      <h2>Contact Us</h2>
+      <p>오늘보다 내일이 더 새로운 팬스타의 최신 정보를 제공해 드립니다.</p>
+      <div class="contact-wrapper flex">
+        <section class="press">
+          <h3>보도자료</h3>
+          <h4>
+            29일부터 대마도행 여객선 승객수 제한 해제 팬스타 425명까지 승선 가능
+          </h4>
+          <p>2023-04-28</p>
+          <a href="#" class="ghost-btn">자세히보기</a>
+        </section>
+        <section class="notice">
+          <h3>notice</h3>
+          <a href="#" class="ghost-btn">소식더보기</a>
+          <ul class="notice-list">
+            <li>
+              <a href="#">[안내] 팬스타크루즈 예약 시스템 점검 안내</a
+              ><span class="date">2023-05-01</span>
+            </li>
+            <li>
+              <a href="#"
+                >[입찰공고] 시스템 데이터 재구성 및 빅데이터 분석용 DW구축</a
+              ><span class="date">2023-05-02</span>
+            </li>
+            <li>
+              <a href="#"
+                >디지털 전환 프로젝트 기반 작업 설계 전략 컨설팅-입찰 공고</a
+              ><span class="date">2023-05-03</span>
+            </li>
+            <li>
+              <a href="#">2021년 선박 정기 점검으로 인한 휴항 안내(4/30~5/09)</a
+              ><span class="date">2023-05-04</span>
+            </li>
+            <li>
+              <a href="#">팬스타크루즈 고객센터 주말 및 공휴일 영업시간 안내</a
+              ><span class="date">2023-05-05</span>
+            </li>
+          </ul>
+        </section>
+        <section class="recruit">
+          <h3>recruit</h3>
+          <p>팬스타 채용안내</p>
+          <a href="#" class="more-btn">채용공고확인</a>
+        </section>
+      </div>
+    </article>
+    <!-- footer -->
+    <footer>
+      <ul class="footer-banner flex">
+        <li>
+          <a href="#"
+            ><img src="./images/logo-enterprise.png" alt="enterprise"
+          /></a>
+        </li>
+        <li>
+          <a href="#"><img src="./images/logo-line.png" alt="line" /></a>
+        </li>
+        <li>
+          <a href="#"><img src="./images/logo-star.png" alt="star" /></a>
+        </li>
+        <li>
+          <a href="#"><img src="./images/logo-tree.png" alt="tree" /></a>
+        </li>
+        <li>
+          <a href="#"><img src="./images/logo-trading.png" alt="trading" /></a>
+        </li>
+        <li>
+          <a href="#"><img src="./images/logo-bngd.png" alt="bngd" /></a>
+        </li>
+        <li>
+          <a href="#"><img src="./images/logo-tech.png" alt="tech" /></a>
+        </li>
+      </ul>
+      <div class="footer-wrapper">
+        <div class="footer-top flex">
+          <h2>팬스타 로고</h2>
+          <ul class="footer-info flex">
+            <li><a href="#">법적고지</a></li>
+            <li><a href="#">개인정보처리방침</a></li>
+            <li><a href="#">이메일 수집거부</a></li>
+          </ul>
+        </div>
+        <div class="footer-bottom flex">
+          <address>
+            <p>
+              서울특별시 중구 무교로 20, 어린이재단빌딩 5층 부산광역시 중구
+              해관로 30, 팬스타크루즈 플라자 빌딩 3층
+              <span class="block-line"
+                >대표전화[여객] 1577 - 9996 [화물] 051&#10089; 465 -
+                4500팩스051&#10089; 469 - 8208</span
+              >
+            </p>
+            <p class="copyright">COPYRIGHT© PANSTAR ALL RIGHTS RESERVED.</p>
+          </address>
+          <select name="familySite" id="family-site">
+            <option value="family site">family site</option>
+            <option value="enterprise">enterprise</option>
+            <option value="line">line</option>
+            <option value="star">star</option>
+          </select>
+        </div>
+      </div>
+    </footer>
+    <script>
+      const mapContainer = document.getElementById("map"), // 지도를 표시할 div
+        mapOption = {
+          center: new kakao.maps.LatLng(37.2682, 127.0001), // 지도의 중심좌표
+          level: 3, // 지도의 확대 레벨
+          mapTypeId: kakao.maps.MapTypeId.ROADMAP, // 지도종류
+        };
+
+      // 지도를 생성한다
+      var map = new kakao.maps.Map(mapContainer, mapOption);
+
+      // 마우스 휠과 모바일 터치를 이용한 지도 확대, 축소를 막는다
+      map.setZoomable(false);
+
+      // 지도에 확대 축소 컨트롤을 생성한다
+      var zoomControl = new kakao.maps.ZoomControl();
+
+      // 지도의 우측에 확대 축소 컨트롤을 추가한다
+      map.addControl(zoomControl, kakao.maps.ControlPosition.RIGHT);
+
+      // 지도에 마커를 생성하고 표시한다
+      var marker = new kakao.maps.Marker({
+        position: new kakao.maps.LatLng(37.2682, 127.0001), // 마커의 좌표
+        map: map, // 마커를 표시할 지도 객체
+      });
+    </script>
+  </body>
+</html>
