@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>gridBasic1</title>
+  <style>
+    /* 
+  grid: row(행) / column(열)
+  grid-container 속성 : grid-template, grid-area, gap, jutify-content,
+  align-item..
+  grid-item 속성 : grid-row , grid-column, jutify-self, align-self.. 
+*/
+    .box {
+      width: 90%;
+      margin: 50px auto;
+      border: 6px solid orangered;
+    }
+
+    .box .item {
+      background-color: olivedrab;
+      margin: 4px;
+      color: #fff;
+    }
+
+    .container1 {
+      display: grid;
+      /* row(행) */
+      /* 1행 2행 3행 4행의 (세로)값 */
+      grid-template-rows: 100px 200px 150px 50px;
+
+      /* 부모 요소에 높이 값이 지정되어 있지 않으면 아이템들끼리 상대 비율로 적용 */
+      grid-template-rows: 20% 20% 40% 40%;
+      grid-template-rows: 10vw 15vw 25vw;
+      grid-template-rows: 10vh 6rem;
+      grid-template-rows: 1fr 2fr 2fr 3fr;
+      /* 
+      fr(fraction) 비율, 분수
+      1행: 1/8
+      2행: 2/8
+      3행: 2/8
+      4행: 3/8 
+    */
+    }
+
+    .container2 {
+      display: grid;
+      /* column(열) */
+      /* 1열, 2열, 3열, 4열의(가로)값 */
+      grid-template-columns: 100px 200px 150px 50px;
+      /* 2열 */
+      grid-template-columns: 30vh 10em;
+      /* 3열 */
+      grid-template-columns: 50% 150px 10vw;
+      grid-template-columns: 1fr;
+      grid-template-columns: 50%;
+      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 2fr 3fr 1fr 1fr;
+    }
+
+    .container3 {
+      display: grid;
+      grid-template-rows: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 2fr 100px 1fr;
+      /* 100px 뺀 나머지로 fr 적용 */
+    }
+  </style>
+</head>
+
+<body>
+  <h1>grid 기본1</h1>
+  <p>2차원 (행row과 열columm)의 레이아웃 시스템으로 부모 요소 (grid container)와 자식 요소 (grid item)으로 구성되어 있다.</p>
+  <a href="https://developer.mozilla.org/ko/docs/Learn/CSS/CSS_layout/Grids">MDN Grid</a>
+  <div class="box container1">
+    <div class="item">item1</div>
+    <div class="item">item2</div>
+    <div class="item">item3</div>
+    <div class="item">item4</div>
+  </div>
+  <div class="box container2">
+    <div class="item">item1</div>
+    <div class="item">item2</div>
+    <div class="item">item3</div>
+    <div class="item">item4</div>
+  </div>
+  <div class="box container3">
+    <div class="item">item1</div>
+    <div class="item">item2</div>
+    <div class="item">item3</div>
+    <div class="item">item4</div>
+  </div>
+</body>
+
+</html>
