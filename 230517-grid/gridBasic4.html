@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>gridBasic4</title>
+  <style>
+    .box {
+      width: 90%;
+      margin: 50px auto;
+      border: 6px solid #E26A2C;
+      display: grid;
+    }
+
+    .box .item {
+      background-color: #FFD07F;
+    }
+
+    .box1 {
+      gap: 1ch;
+      /* 2행 7열 */
+      grid-template: 100px 100px / 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+      /* 동일한 값이 반복 될 때 repeat (반복 할 갯수, 크기의 값)적용 */
+      grid-template: 100px 100px / repeat(7, 1fr);
+      /* grid-template-rows: 100px 100px;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr; */
+    }
+
+    .box2 {
+      gap: 0.7vw;
+      /* 3행 6열 */
+      grid-template: repeat(3, 100px) / repeat(6, 1fr);
+      grid-template: repeat(3, 100px) / 200px repeat(5, 1fr);
+      grid-template: repeat(3, 100px) / 200px repeat(4, 1fr) minmax(auto, 150px);
+      grid-template: repeat(3, 100px) / 2ch repeat(3, 1fr) 5em minmax(auto, 150px);
+    }
+  </style>
+</head>
+
+<body>
+  <h1>grid 기본 4</h1>
+  <h2>repeat(반복횟수); 행과 열의 값 반복</h2>
+  <div class="box box1">
+    <div class="item">item1</div>
+    <div class="item">item2</div>
+    <div class="item">item3</div>
+    <div class="item">item4</div>
+    <div class="item">item5</div>
+    <div class="item">item6</div>
+    <div class="item">item7</div>
+    <div class="item">item8</div>
+    <div class="item">item9</div>
+    <div class="item">item10</div>
+    <div class="item">item11</div>
+    <div class="item">item12</div>
+  </div>
+  <div class="box box2">
+    <div class="item">item1</div>
+    <div class="item">item2</div>
+    <div class="item">item3</div>
+    <div class="item">item4</div>
+    <div class="item">item5</div>
+    <div class="item">item6</div>
+    <div class="item">item7</div>
+    <div class="item">item8</div>
+    <div class="item">item9</div>
+    <div class="item">item10</div>
+    <div class="item">item11</div>
+    <div class="item">item12</div>
+    <div class="item">item13</div>
+    <div class="item">item14</div>
+    <div class="item">item15</div>
+    <div class="item">item16</div>
+  </div>
+</body>
+
+</html>

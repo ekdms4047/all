@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>gridEx2</title>
+  <style>
+    .box {
+      margin: 50px auto;
+      width: 80%;
+      height: 60vh;
+      border: 5px solid #182747;
+      display: grid;
+      /* grid-template-rows: 80px 1fr 50px; */
+      grid-auto-rows: 80px minmax(100px, 1fr) 50px;
+    }
+
+    .header {
+      background-color: #B2A4FF;
+    }
+
+    .main {
+      background-color: #222;
+      color: #fff;
+    }
+
+    .footer {
+      background-color: #FFCACA;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">
+    <div class="header">header-고정</div>
+    <div class="main">main-가변</div>
+    <div class="footer">footer-고정</div>
+  </div>
+</body>
+
+</html>
