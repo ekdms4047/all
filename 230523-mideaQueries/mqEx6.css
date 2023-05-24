@@ -35,7 +35,7 @@ main .container {
   padding: 100px 0;
   display: grid;
   place-items: center;
-  background: var(--bg-color) url(./images_2/hero-bg.png) no-repeat 48% / cover;
+  background: var(--bg-color) url(./images/hero-bg.png) no-repeat 48% / cover;
 }
 main .container svg {
   position: fixed;
@@ -330,7 +330,7 @@ main .container ul li:first-child::after {
       rgba(105, 169, 197, 0.8),
       rgba(105, 169, 197, 0.9)
     ),
-    url(./images_2/img-bg.jpg) no-repeat 45%;
+    url(./images/img-bg.jpg) no-repeat 45%;
 }
 .talk .talk_box {
   text-align: center;
