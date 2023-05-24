@@ -68,17 +68,30 @@ header .header-wrapper .subNav li:hover {
   background: url(./images/title-bg.png) no-repeat;
   aspect-ratio: 16/9;
   width: 100%;
+  position: relative;
 }
-.container .mini-container svg {
+.container .mini-container a:nth-child(1) svg{
   position: absolute;
   top: 50%;
-  transform: rotate(90deg);
 }
-.container .mini-container svg:last-child {
+.container .mini-container a:nth-child(2) svg {
   position: absolute;
   top: 50%;
   right: 0;
-  transform: rotate(270deg);
+  transform: rotate(180deg);
+}
+.container .mini-container a:nth-child(3) svg {
+  position:fixed;
+  top:900px;
+  right: 15px;
+  transform: rotate(360deg);
+  background-color: rgba(0, 0, 0, 25%);
+  width: 35px;
+  height: 35px;
+  transition: 0.4s;
+}
+.container .mini-container svg:last-child:hover {
+  background-color: var(--point-color);
 }
 .container .txt-container {
   color: #fff;
@@ -287,6 +300,7 @@ header .header-wrapper .subNav li:hover {
   margin: 0 30px;
   position: relative;
 }
+
 .branding3 .portfolio .business svg {
   position: absolute;
   top: 35%;
@@ -337,10 +351,20 @@ header .header-wrapper .subNav li:hover {
 .industry {
   background-color: #f8f9fa;
   padding: 144px 200px;
+  position: relative;
 }
 .industry h2 {
   font-size: var(--font-size-64);
   font-weight: bold;
+}
+.industry .arrows {
+  position: absolute;
+  top:55%; left: 10%;
+}
+.industry .arrows2 {
+  position: absolute;
+  top:55%; right: 10%;
+  transform: rotate(180deg);
 }
 .industry .industry-list {
   /* background-color: orange; */
@@ -407,22 +431,26 @@ footer .address {
   height: 580px;
   flex-direction: column;
   justify-content: center;
+  padding: 30px;
+  line-height: 2;
 }
 footer .address img {
   width: 50px;
   height: 50px;
 }
 footer .address:nth-child(1) {
-  background: url(./images/icon\ _map\ marker_.png) no-repeat 50% 20% /40px;
+  background: url(./images/icon\ _map\ marker_.png) no-repeat 50% 25% /40px;
+  padding: 10px 30px 40px;
 }
 footer .address:nth-child(2) {
-  background: url(./images/icon\ _envelope\ closed_.png) no-repeat;
+  background: url(./images/icon\ _envelope\ closed_.png) no-repeat no-repeat 50% 25% /50px;
+  padding: 10px 30px 40px;
 }
 footer .address:nth-child(3) {
-  background: url(./images/icon\ _clock_.png) no-repeat;
+  background: url(./images/icon\ _clock_.png) no-repeat no-repeat 50% 25% /50px;
 }
 footer .address:nth-child(4) {
-  background: url(./images/icon\ _headphones_.png) no-repeat;
+  background: url(./images/icon\ _headphones_.png) no-repeat no-repeat 50% 25% /50px;
 }
 footer .address h3 {
   text-transform: uppercase;
