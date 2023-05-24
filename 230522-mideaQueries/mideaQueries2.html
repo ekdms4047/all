@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>mideaQueries2</title>
+  <style>
+    /* pc 기준 */
+    ::selection {
+      background-color: #394867;
+      color: #fff;
+    }
+
+    body {
+      background-color: #E5BEEC;
+      font-size: 1.2rem;
+    }
+
+    h1 {
+      border-bottom: 3px solid #222;
+    }
+
+    ul {
+      padding: 20px;
+      margin: 20px;
+      border: 3px solid #222;
+    }
+
+    /* 스크린 가로 크기가 최대 1200 이하면 적용. 즉 최대 1200px만 허용 */
+    @media (max-width:1200px) {
+      body {
+        background-color: lightskyblue;
+      }
+    }
+
+    @media (max-width:768px) {
+      body {
+        background-color: orange;
+      }
+    }
+
+    @media (max-width:416px) {
+      ::selection {
+        background-color: transparent;
+        color: #222;
+      }
+
+      body {
+        background-color: #FCC8D1;
+        font-size: 14px;
+      }
+
+      h1 {
+        border: 1px #000 dotted;
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <h1>미디어쿼리 midea Queries</h1>
+  <ul>
+    <li>@media () {}</li>
+    <li>모바일 우선인 경우 min-width</li>
+    <li>*** min-width 혹은 모바일 우선 작업시 <strong>반드시 크기가 가로값이 작은 순서</strong>대로 작성</li>
+    <li>pc 우선인 경우 max-width</li>
+    <li>max-width 혹은 pc 우선 작업시 <strong>반드시 가로 크기가 큰 순서</strong>대로 작성</li>
+  </ul>
+</body>
+
+</html>

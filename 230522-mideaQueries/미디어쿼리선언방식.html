@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>미디어쿼리 선언 방식</title>
+  <!-- 외부선언1 -->
+  <!-- <link rel="stylesheet" href="./medeaQueries_all.css"> -->
+
+  <!-- 외부선언2 모바일 우선인 경우 작은 값을 먼저 연결 -->
+  <!-- 모바일 > 태블릿 > 피시 -->
+  <!-- <link rel="stylesheet" href="./medeaQueries_m.css">
+  <link rel="stylesheet" href="./medeaQueries_t.css">
+  <link rel="stylesheet" href="./medeaQueries_p.css"> -->
+
+  <!-- 외부선언3 -->
+  <link rel="stylesheet" href="mobile.css">
+  <link rel="stylesheet" href="tablet.css" media="(min-width:768px)">
+  <link rel="stylesheet" href="pc.css" media="(min-width:1200px)">
+
+  <!-- 내부 선언 -->
+  <style>
+    /* 기본(모바일) */
+    html {
+      font-size: 18px;
+    }
+
+    body {
+      margin: 0;
+      text-align: center;
+      word-break: break-all;
+      overflow-wrap: break-word;
+    }
+
+    h1 {
+      background-color: #2B3A55;
+      color: #fff;
+      font-size: 1.6rem;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 strong {
+      display: block;
+    }
+
+    h2 {
+      background-color: #FF7B54;
+      margin: 0;
+      padding: 10px;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      font-weight: bold;
+    }
+
+    .container .box {
+      height: 20vh;
+    }
+
+    .container .box1 {
+      background-color: #E9E8E8;
+      ;
+    }
+
+    .container .box2 {
+      background-color: #CD5888;
+    }
+
+    .container .box3 {
+      background-color: #913175;
+    }
+
+    /* 태블릿 */
+    @media (min-width:768px) {
+      h1 {
+        background-color: #BFDB38;
+      }
+
+      h1 strong {
+        display: inline;
+      }
+
+      h2 {
+        background-color: #1F8A70;
+      }
+
+      .container {
+        width: 70%;
+        margin: 0 auto;
+      }
+    }
+
+    /* pc */
+    @media (min-width:1200px) {
+      h1 {
+        background-color: #C539B4;
+        padding: 50px;
+      }
+
+      h2 {
+        display: none;
+      }
+
+      .container {
+        flex-direction: row;
+      }
+
+      .container .box {
+        flex-grow: 1;
+        width: 33.3333%;
+        aspect-ratio: 1;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <h1>미디어쿼리 <strong>선언 방식</strong></h1>
+  <h2>내부선언과 <br>외부선언</h2>
+  <div class="container">
+    <div class="box box1">box1</div>
+    <div class="box box2">box2</div>
+    <div class="box box3">box3</div>
+  </div>
+</body>
+
+</html>

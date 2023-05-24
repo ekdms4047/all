@@ -1,0 +1,45 @@
+@charset "utf-8";
+/* font-family: 'Edu TAS Beginner', cursive; */
+@import url("https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner:wght@400;500;600;700&display=swap");
+
+/* 기본(모바일) */
+body {
+  font-family: "Edu TAS Beginner", cursive;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  color: #fff;
+  background: url(./images/bg.jpg) no-repeat fixed 50% / cover;
+}
+nav .global-nav {
+  display: flex;
+  /* flex-direction flex-wrap */
+  flex-flow: column wrap;
+  display: none;
+}
+nav .global-nav.active {
+  display: flex;
+}
+nav a {
+  display: block;
+  border-bottom: 1px solid #fff;
+  height: 60px;
+  /* line-height: 60px; */
+  /* text-indent: 10px; */
+  padding-left: 10px;
+  display: flex;
+  align-items: center;
+}
+nav .mobile-btn {
+  background-color: rgba(153, 153, 255, 0.5);
+  position: relative;
+}
+nav .mobile-btn::after {
+  content: "";
+  background: url(./images/ellipsis.svg) no-repeat 50% / contain;
+  width: 26px;
+  height: 26px;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}

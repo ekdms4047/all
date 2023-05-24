@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>mqEx3</title>
+  <style>
+    body {
+      margin: 0;
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .container {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      background-color: #9DB2BF;
+      display: flex;
+      flex-wrap: wrap;
+      padding: 10vw;
+    }
+
+    .container li {
+      background-color: #FFE569;
+      width: 48%;
+      margin: 1%;
+    }
+
+    .container .none {
+      display: none;
+    }
+
+    @media (width >=414px) {
+
+      /* 3열 */
+      .container li {
+        width: 31.3333%;
+      }
+
+      .container li:last-child {
+        display: none;
+      }
+    }
+
+    @media (width >=768px) {
+
+      /* 4열 */
+      .container li {
+        width: 23%;
+      }
+
+      .container li:last-child {
+        display: block;
+        background-color: #98EECC;
+      }
+    }
+
+    @media (width >=960px) {
+
+      /* 5열 */
+      .container {
+        width: 90%;
+        margin: 0 auto;
+        box-sizing: border-box;
+      }
+
+      .container li {
+        width: 18%;
+      }
+
+      .container .none {
+        display: block;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <ul class="container">
+    <li>txt1</li>
+    <li>txt2</li>
+    <li>txt3</li>
+    <li class="none">txt4</li>
+    <li>txt5</li>
+    <li>txt6</li>
+    <li>txt7</li>
+    <li>txt8</li>
+    <li>txt9</li>
+    <li>txt10</li>
+  </ul>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>mqEx5쌤</title>
+  <link rel="stylesheet" href="../common/reset.css">
+  <!-- 모바일 우선 -->
+  <link rel="stylesheet" href="./mqEx5.css">
+  <!-- <link rel="stylesheet" media="(width >=768px)" href="./mqEx5-tablet.css">
+  <link rel="stylesheet" media="(width >=1200px)" href="./mqEx5-pc.css"> -->
+  <link rel="stylesheet" href="./mqEx5-tablet.css">
+  <link rel="stylesheet" href="./mqEx5-pc.css">
+</head>
+
+<body>
+  <nav>
+    <menu class="global-nav">
+      <li><a href="#">home</a></li>
+      <li><a href="#">about</a></li>
+      <li><a href="#">web</a></li>
+      <li><a href="#">map</a></li>
+      <li><a href="#">contact</a></li>
+    </menu>
+    <a href="#" class="mobile-btn">menu</a>
+  </nav>
+  <script>
+    const globalNav = document.querySelector(".global-nav");
+    const mobileBtn = document.querySelector(".mobile-btn");
+
+    mobileBtn.addEventListener('click', () => globalNav.classList.toggle('active'));
+  </script>
+</body>
+
+</html>

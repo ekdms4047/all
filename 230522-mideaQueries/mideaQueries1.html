@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <!-- *미디어 쿼리 작성시 뷰포트 값 필수 -->
+  <!-- content~ 만 작성 가능 ! -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>mideaQueries1</title>
+  <style>
+    /* 
+      @midea screen { 스크린을 만났을 때 실행
+        실행문
+      }
+      @midea screen and (min-width:414px) { 스크린의 가로 크기가
+        최소 414px 이상이면 적용
+      }
+       @midea screen and (min-width:414px) and (max-width:960px) { 가로 크기가 최소 414 이상이며 최대 960px까지만 적용
+        실행문
+      }
+      @midea all and (min-width:414px){ 가로 크기가 최소 414 이상이면 적용
+        @media screen and (max-width:960px) { 960까지만 적용
+          실행문
+        }
+      }
+
+      @media (width >= 414px) { 가로 크기가 최소 414px 이상이면 적용
+        실행문
+      }
+    */
+
+    /* 모바일 우선 */
+    body {
+      background-color: #ddd;
+      font-size: 14px;
+      color: violet;
+    }
+
+    h1 {
+      border: 5px solid #222;
+      padding: 10px;
+      margin: 20px;
+      background-color: saddlebrown;
+      color: #fff;
+    }
+
+    p.txt {
+      font-size: 1.3rem;
+      font-weight: bold;
+      background-color: tomato;
+      color: #222;
+      padding: 20px;
+    }
+
+    /* 스크린의 가로 크기가 최소 768이상이면 적용 */
+    @media screen and (min-width:768px) {
+
+      /* 스크린 경계치, breakpoint */
+      body {
+        background-color: aquamarine;
+      }
+
+      h1 {
+        border-style: double;
+      }
+
+      p {
+        text-decoration: underline;
+      }
+
+    }
+
+    @media (width >=1280px) {
+      ::selection {
+        background-color: #FFB84C;
+      }
+
+      body {
+        background-color: #ACBCFF;
+      }
+
+      h1 {
+        border: none;
+        border-bottom: 3px solid #222;
+      }
+
+      p.txt {
+        background-color: #A459D1;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <h1>미디어쿼리 midea Queries란?</h1>
+  <h2>화면 해상도, 기기 방향 등의 조건으로 HTML에 적용하는 스타일을 전환할 수 있는 CSS3의 속성 중의 하나이다.</h2>
+  <p class="txt">@midea [only 또는 not] [미디어유형] [and 혹은 ,]
+    (조건문) {실행문}</p>
+  <p>**** min을 사용할 땐 반드시 크기가 작은 순서대로 작성해야하고
+    max를 사용할 때는 반드시 크기가 큰 순서대로 작성해야 한다.</p>
+</body>
+
+</html>

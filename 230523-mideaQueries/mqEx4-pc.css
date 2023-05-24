@@ -1,0 +1,14 @@
+@charset "utf-8";
+/* mqEx4-pc.css */
+
+/* @media (width>=768px) {} html 문서 link 속성으로 미디어값을 작성했기 때문에 css 문서에서는 불필요 */
+.apple-watch {
+  flex-direction: row;
+}
+
+.apple-watch figcaption {
+  margin-left: 2vw;
+  background-color: #fff;
+  padding: 20px;
+  width: min(50vw, 400px);
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>mqEx2</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<style>
+  /* 기본(모바일) */
+  body {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .container {
+    display: grid;
+    grid-template-rows: 40vh 20vh 20vh;
+  }
+
+  .container .left_item {
+    background-color: #DF7861;
+  }
+
+  .container .right_item1 {
+    background-color: #ECB390;
+  }
+
+  .container .right_item2 {
+    background-color: #94B49F;
+  }
+
+  /* 태블릿 */
+  @media (width >=768px) {
+    .container {
+      grid-template: 25vh 25vh / 1fr 2fr;
+    }
+
+    .container .left_item {
+      grid-row: span 2;
+    }
+  }
+
+  /* pc */
+  @media (width >=960px) {
+    .container {
+      width: 90%;
+      max-width: 1500px;
+      margin: 0 auto;
+    }
+
+    .container .left_item {
+      order: 2;
+    }
+
+    .container .right_item1 {
+      order: 3;
+    }
+
+    .container .right_item2 {
+      order: 1;
+    }
+  }
+</style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="left_item">left_item</div>
+    <div class="right_item1">right_item1</div>
+    <div class="right_item2">right_item2</div>
+  </div>
+</body>
+
+</html>
