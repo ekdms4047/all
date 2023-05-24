@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>mqEx5</title>
+  <style>
+    /* 기본 (모바일) */
+    body {
+      margin: 0;
+      background: url(./images/bg.jpg) no-repeat 50% 10%;
+    }
+
+    ul {
+      list-style: none;
+      display: grid;
+      margin: 0;
+      padding: 0;
+    }
+
+    ul li {
+      border-bottom: 1px solid #fff;
+      color: #fff;
+      text-transform: uppercase;
+      font-size: 1.5rem;
+      font-weight: bold;
+      padding: 15px 5px;
+    }
+
+    ul li:last-child {
+      background-color: rgba(153, 153, 255, 0.5)
+    }
+
+    ul li:last-child::after {
+      content: "...";
+      writing-mode: vertical-lr;
+      font-size: 3rem;
+      position: absolute;
+      top: 330px;
+      right: 0;
+    }
+
+    @media (width >=768px) {
+      ul {
+        grid-template-columns: repeat(2, 1fr);
+        border-bottom: 2px solid #fff;
+      }
+
+      ul li:nth-child(odd) {
+        border-right: 1px solid #fff;
+      }
+
+      ul li:last-child {
+        display: none;
+      }
+    }
+
+    @media (width >=960px) {
+      ul {
+        grid-template-columns: repeat(7, 1fr);
+      }
+
+      ul li {
+        border-right: 1px solid #fff;
+        display: grid;
+        place-items: center;
+      }
+
+      ul li:first-child {
+        grid-column: 2 / 3;
+        border-left: 1px solid #fff;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <ul>
+      <li>home</li>
+      <li>about</li>
+      <li>web</li>
+      <li>map</li>
+      <li>contact</li>
+      <li>menu</li>
+    </ul>
+  </div>
+</body>
+
+</html>

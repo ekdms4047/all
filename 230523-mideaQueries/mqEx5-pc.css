@@ -1,0 +1,29 @@
+@charset "utf-8";
+/* mqEx5-pc */
+
+@media (width >= 1200px) {
+  /* 최상위 root rem의 기준 */
+  html {
+    font-size: 18px;
+  }
+  nav .global-nav {
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+  nav .global-nav li {
+    max-width: 200px;
+  }
+  nav a {
+    height: 50px;
+    padding: 0;
+    border-right: 1px solid #fff;
+    border-bottom: none;
+    justify-content: center;
+  }
+  nav .global-nav li:first-child a {
+    border-left: 1px solid #fff;
+  }
+  nav .global-nav li:hover a {
+    background-color: rgba(153, 153, 255, 0.5);
+  }
+}

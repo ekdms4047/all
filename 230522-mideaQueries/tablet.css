@@ -1,0 +1,19 @@
+@charset "utf-8";
+
+/* html link 속성으로 media 연결시 css 문서 내의 @media () {} 필요 없음 */
+h1 {
+  background-color: #bfdb38;
+}
+
+h1 strong {
+  display: inline;
+}
+
+h2 {
+  background-color: #1f8a70;
+}
+
+.container {
+  width: 70%;
+  margin: 0 auto;
+}

@@ -14,6 +14,7 @@
 
     .box .item {
       background-color: olivedrab;
+      /* 여백 포함한 값의 셀임 */
       margin: 4px;
       color: #fff;
     }
@@ -23,14 +24,18 @@
       /* 2행 3열 */
       grid-template-rows: 100px 200px;
       grid-template-rows: minmax(100px, 200px) 1fr;
+      grid-template-rows: minmax(auto, 200px) minmax(100px, auto);
 
+      /* 1/5 1/5 3/5 */
       grid-template-columns: 1fr 1fr 3fr;
+      grid-template-columns: minmax(200px, 400px) 1fr 3fr;
+      grid-template-columns: minmax(200px, 400px) minmax(auto, 300px) minmax(200px, auto);
     }
   </style>
 </head>
 
 <body>
-  <h1>grid 기본</h1>
+  <h1>grid 기본 2</h1>
   <h2>grid-template : minmax(최대값,최소값)</h2>
   <div class="box container">
     <div class="item">item1</div>

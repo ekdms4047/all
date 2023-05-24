@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>gridEx5</title>
+</head>
+<style>
+  .box {
+    background-color: #FF731D;
+    width: 50vw;
+    aspect-ratio: 1;
+    margin: 50px auto;
+    display: grid;
+    place-items: center;
+  }
+
+  .box .item {
+    font-size: 10vw;
+    font-weight: bold;
+    background-color: #F9D949;
+    width: 35%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    box-shadow: 10px 0 #222;
+    transform: rotate(90deg);
+    text-align: center;
+    line-height: 1.5;
+    /* display: grid;
+    place-items: center; */
+
+    /* 글자 세로 작성 방향 */
+    /* writing-mode: vertical-lr ; left->righ */
+    /* writing-mode: vertical-rl; right->left */
+
+  }
+</style>
+
+<body>
+  <div class="box">
+    <div class="item">:)</div>
+  </div>
+</body>
+
+</html>

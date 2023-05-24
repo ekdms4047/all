@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>gridEx6</title>
+  <style>
+    .box {
+      width: 80%;
+      height: 50vh;
+      color: #fff;
+      border: 5px solid #182747;
+      margin: 50px auto;
+      display: grid;
+      gap: 0.5ch;
+      /* auto-fit 아이템을 늘려 트랙을 채움 */
+      /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
+
+      /* 아이템의 크기가 커지지 않고 여백을 둠 */
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+
+    .box .item:nth-child(odd) {
+      background-color: #19376D;
+    }
+
+    .box .item:nth-child(even) {
+      background-color: #576CBC;
+    }
+  </style>
+</head>
+
+<body>
+  <!--
+    컨테이너의 크기가 커지면 여백없이 채우고
+    작아지면 아이템 자동 줄바꿈
+   -->
+  <div class="box">
+    <div class="item">item1</div>
+    <div class="item">item2</div>
+    <div class="item">item3</div>
+    <div class="item">item4</div>
+  </div>
+</body>
+
+</html>

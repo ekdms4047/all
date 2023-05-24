@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>gridEx11</title>
+  <style>
+    .container {
+      margin: 50px auto;
+      border: 5px solid #000;
+      width: 80%;
+      padding: 1vw;
+      box-sizing: border-box;
+      color: #fff;
+      font-weight: bold;
+      font-size: 1.5rem;
+
+      display: grid;
+      grid-template: repeat(3, 1fr) / repeat(4, 1fr);
+      grid-template-areas:
+        "item3 item1 item1 ."
+        "item3 none item2 item2"
+        "item4 item4 item2 item2"
+      ;
+      gap: 1vw;
+    }
+
+    .item1 {
+      background-color: #5F264A;
+      grid-area: item1;
+    }
+
+    .item2 {
+      background-color: #643A6B;
+      grid-area: item2;
+    }
+
+    .item3 {
+      background-color: #957777;
+      grid-area: item3;
+    }
+
+    .item4 {
+      background-color: #B0A4A4;
+      grid-area: item4;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="item1">item1</div>
+    <div class="item2">item2</div>
+    <div class="item3">item3</div>
+    <div class="item4">item4</div>
+  </div>
+</body>
+
+</html>

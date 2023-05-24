@@ -7,11 +7,11 @@
   <title>gridBasic1</title>
   <style>
     /* 
-  grid: row(행) / column(열)
-  grid-container 속성 : grid-template, grid-area, gap, jutify-content,
-  align-item..
-  grid-item 속성 : grid-row , grid-column, jutify-self, align-self.. 
-*/
+      grid: row(행) / column(열)
+      grid-container 속성 : grid-template, grid-area, gap, jutify-content,
+      align-item..
+      grid-item 속성 : grid-row , grid-column, jutify-self, align-self.. 
+    */
     .box {
       width: 90%;
       margin: 50px auto;
@@ -38,9 +38,9 @@
       /* 
       fr(fraction) 비율, 분수
       1행: 1/8
-      2행: 2/8
-      3행: 2/8
-      4행: 3/8 
+      1행: 2/8
+      1행: 2/8
+      1행: 3/8 
     */
     }
 
@@ -61,6 +61,7 @@
 
     .container3 {
       display: grid;
+      /* 3행 3열 */
       grid-template-rows: 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr;
       grid-template-columns: 1fr 2fr 100px 1fr;

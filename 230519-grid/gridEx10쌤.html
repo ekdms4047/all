@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>gridEx10쌤</title>
+  <style>
+    .container {
+      width: 90%;
+      margin: 30px auto;
+      text-transform: uppercase;
+      color: #fff;
+      display: grid;
+      /* 3열 */
+      grid-template-columns: 3.1rem 1fr 3.1rem;
+      grid-template-rows: 3.1rem minmax(200px, 30vh) minmax(200px, 30vh) 3.1rem;
+    }
+
+    :is(.container) header,
+    footer {
+      /* grid-item / grid-container */
+      background-color: #000;
+      /* height: 3.1rem; */
+      /* 텍스트 정렬 */
+      /* text-align: center;
+      line-height: 3.1rem; */
+
+      /* display: flex;
+      justify-content: center;
+      align-items: center; */
+
+      display: grid;
+      place-items: center;
+
+      /* grid-column: span 3; */
+      grid-column: 1 / -1;
+    }
+
+    .container .vertical-txt {
+      /* 상속 (한글은 잘 나옴, 영어는 누워짐)*/
+      writing-mode: vertical-lr;
+      /* writing-mode 작성시 영어의 글자 방향 */
+      text-orientation: upright;
+      letter-spacing: 3px;
+    }
+
+    .container .menu {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      background-color: #B3005E;
+      grid-column: 1/2;
+
+      border: 3px solid #000;
+      border-top: none;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      /* aspect-ratio: 1/6; */
+    }
+
+    .container .blank {
+      background-color: #E90064;
+      grid-column: 1/2;
+      border: 3px solid #000;
+      border-top: none;
+      border-bottom: none;
+      /* aspect-ratio: 1/6; */
+    }
+
+    .container .video-wrapper {
+      grid-row: 2 / 4;
+      grid-column: 2 / 3;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .container video {
+      object-fit: cover;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .container .video-wrapper h1 {
+      background: #000;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 6px 30px;
+    }
+
+    .container aside {
+      background-color: #2B3467;
+      /* grid-column: 3 / 4; */
+      grid-column: -1 / -2;
+      grid-row: 2 / 3;
+      display: grid;
+      place-items: center;
+      border: 3px solid #000;
+      border-top: none;
+    }
+
+    .container .item2 {
+      grid-row: 3 / 4;
+      border-bottom: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <header>header</header>
+
+    <ul class="menu vertical-txt">
+      <li>menu1</li>
+      <li>menu2</li>
+      <li>menu3</li>
+    </ul>
+    <div class="blank"></div>
+
+    <div class="video-wrapper">
+      <video src="./sampleV.mp4" autoplay muted loop></video>
+      <h1>grid</h1>
+    </div>
+
+    <aside class="item1 vertical-txt">아이템1</aside>
+    <aside class="item2 vertical-txt">아이템2</aside>
+
+    <footer>footer</footer>
+  </div>
+</body>
+
+</html>
