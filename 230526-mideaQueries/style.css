@@ -1,0 +1,204 @@
+@charset "utf-8";
+
+/* fonts */
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
+
+/* 변수 설정 */
+:root {
+  --main-font: "Pretendard Variable", Pretendard, -apple-system,
+    BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI",
+    "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  --en-font: "Ubuntu", sans-serif;
+  --main-color: #222;
+  --gray-color: #c1c1c1;
+  --bg-gray-color: #f6f1f1;
+}
+
+/* 드래그 */
+::selection {
+  background-color: #fea1a1;
+  color: #fff;
+}
+
+/* 스크롤바 */
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #ddd;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #fea1a1;
+  border-radius: 20px;
+}
+
+html {
+  /* 부드러운 스크롤 */
+  scroll-behavior: smooth;
+}
+.upTo {
+  z-index: 9999;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  background: url(./images/arrow_up.svg) rgba(20, 20, 20, 1) no-repeat 50% / 80%;
+  width: 40px;
+  height: 40px;
+  text-indent: -999px;
+  overflow: hidden;
+  /* or font-size: 0; */
+  opacity: 0.5;
+}
+.upTo:hover {
+  opacity: 1;
+  background-color: #fea1a1;
+  bottom: 25px;
+}
+body {
+  font-family: var(--main-font);
+  line-height: 1.5;
+  color: var(--main-color);
+  text-transform: capitalize;
+  word-break: break-all;
+  overflow-wrap: break-word;
+}
+
+/***** header *****/
+header {
+  border-bottom: 1px solid var(--gray-color);
+  background-color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+header .header-wrapper {
+  width: 93%;
+  height: 60px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* background-color: #fea1a1; */
+}
+header h1 {
+  width: 75px;
+  /* height: 60px; */
+}
+header a {
+  display: block;
+}
+header nav .global-nav {
+  display: none;
+  background-color: #fff;
+  width: 100%;
+  position: fixed;
+  top: 60px;
+  left: 0;
+  padding: 2% 3%;
+}
+header nav .global-nav a {
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--gray-color);
+  padding: 14px 5px 10px;
+  font-family: var(--en-font);
+  font-weight: 700;
+}
+header nav .global-nav li:last-child a {
+  border-bottom: none;
+}
+header nav .mobile_btn {
+  position: absolute;
+  top: 50%;
+  right: 3.5%;
+  transform: translateY(-50%);
+}
+header nav .mobile_btn span {
+  display: block;
+  text-indent: -9999px;
+  width: 30px;
+  height: 4px;
+  transition: 0.4s;
+  background-color: #222;
+  border-radius: 16px;
+  position: relative;
+}
+header nav .mobile_btn span::before,
+header nav .mobile_btn span::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 0;
+  width: 30px;
+  height: 4px;
+  transition: 0.4s;
+  background-color: #222;
+  border-radius: 16px;
+}
+header nav .mobile_btn span::after {
+  /* auto 붙히면 초기화 해줌 */
+  top: 10px;
+}
+header nav .mobile_btn.close span {
+  background-color: transparent;
+}
+header nav .mobile_btn.close span::before {
+  transform: rotate(45deg);
+  top: 0;
+}
+header nav .mobile_btn.close span::after {
+  transform: rotate(-45deg);
+  top: 0;
+}
+
+/***** footer *****/
+footer {
+}
+footer .footer-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 80px 20px;
+  background-color: rgba(248, 249, 250);
+}
+footer .footer-info h2 {
+  text-indent: -999px;
+  background: url(./images/logo@2x.png) no-repeat 50% / contain;
+  width: 126px;
+  height: 101px;
+}
+footer .footer-info .footer-info-list {
+  margin: 20px 0;
+}
+footer .footer-info .footer-info-list h3 {
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  font-family: var(--en-font);
+}
+footer .footer-info .footer-info-list .footer-social-icon {
+  display: flex;
+  align-items: center;
+}
+footer .footer-info .footer-info-list .footer-social-icon li {
+  margin: 10px 20px 10px 0;
+}
+footer .footer-info .footer-info-list .footer-social-icon svg {
+  width: 20px;
+  fill: gray;
+}
+footer .copyrights {
+  background-color: rgba(0, 0, 0, 0.07);
+  text-align: center;
+  padding: 50px;
+}
+footer .copyrights ul {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+footer .copyrights ul li:first-child::after {
+  content: " / ";
+  margin-right: 5px;
+}

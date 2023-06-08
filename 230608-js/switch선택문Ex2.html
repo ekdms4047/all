@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>switch선택문Ex2</title>
+  <style>
+    img {
+      width: 300px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 
+    1. 1~4 사이의 숫자를 입력하면 해당 번호 이미지 출력
+    취소 버튼 클릭시 취소했습니다 출력
+    그 외는 해당 번호만 입력해주세요 출력
+   -->
+  <script>
+    let num = prompt('1~4번까지의 숫자를 입력하세요');
+    let img = '';
+
+    switch (num) {
+      case null:
+        img = '<h2>취소했습니다</h2>';
+        break;
+      case "1":
+        img = '<img src="./images/food1.jpg" alt="우삼겹과 파가 올라간 국물 떡볶이가 메인에 있고 콜라와 피클, 앞접시가 있음">'
+        break;
+      case "2":
+        img = '<img src="./images/food2.jpg" alt="양념치킨">'
+        break;
+      case "3":
+        img = '<img src="./images/food3.jpg" alt="food3">'
+        break;
+      case "4":
+        img = '<img src="./images/food4.jpg" alt="food4">'
+        break;
+      default:
+        img = '<h2>해당 번호만 입력해주세요</h2>';
+    }
+    document.body.innerHTML = img;
+  </script>
+</body>
+
+</html>
