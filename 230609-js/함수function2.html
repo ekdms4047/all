@@ -1,0 +1,58 @@
+<script>
+  /* 
+    https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Functions
+    매개변수를 통해 함수 내부로 들어갈 수 있음
+    매개변수는 이름 중복되도 상관없음, 매개. 연결해주는 역할이기 때문에
+    function num (매개변수1, parameter2, 인자, 인수 ...) {
+      실행문;
+    }
+    num(인수);
+  */
+
+  // (a) -> 매개 변수 
+  // 매개변수 안에 함수 자체를 넣는 경우 많음
+  const num = function (a) {
+    console.log(a + 10);
+  };
+
+  // 괄호 안에 기입 안하면 Not a Number 뜸
+  num(20); // 인수
+  num(50);
+  num(12.30);
+
+  const sum1 = function (wt) {
+    console.log(`가로 : ${wt}`);
+  }
+  sum1(100);
+
+  const sum2 = function (wt, ht) {
+    console.log(`가로 : ${wt}, 세로 : ${ht}`);
+    console.log(wt * ht);
+    console.log(wt - ht);
+  }
+  sum2(10, 20);
+  sum2(240, 1321);
+
+  console.log('---------------');
+  // dt = 5 매개변수의 값이 없는 경우 기본값 적용
+  const sum3 = function (wt, ht, dt = 5) {
+    console.log(`박스의 부피는 ${wt * ht * dt} 입니다`)
+  }
+  sum3(5, 10, 30);
+  // sum3(5, 10); wt:5, ht:10, dt:undefined -> NaN
+  sum3(10, 25); // wt:10, ht:25, dt:5
+
+  console.log('---------------');
+  // 이름이 있는 함수를 넣어준다 라고 함
+  const sum4 = function output(x, y) {
+    console.log(x + y);
+  }
+  // output('즐거운', '금요일'); 변수에 할당된 경우 함수명으로 호출시 에러.
+  sum4('즐거운', '금요일');
+
+  const sum5 = function (x, y) {
+    let obj = x * y;
+  }
+  sum5(10, 20);
+  console.log(obj); //obj is not defined
+</script>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>함수Ex7</title>
+  <style>
+    .btn {
+      width: 100px;
+      background-color: #222;
+      color: #fff;
+      padding: 20px;
+      margin: 10px;
+      font-size: 1.2rem;
+      text-align: center;
+      cursor: pointer;
+    }
+  </style>
+
+  <!-- defer 속성: 페이지 구성이 끝날 때까지 대기했다가 실행  -->
+  <script defer src="./functionEx7.js"></script>
+  <!-- /* window.onload = function () {
+      const btn = document.getElementById('btn');
+      console.log(orange);
+      orange.onclick = function () {
+        getAlert1();
+      }
+      console.log(tomato);
+      tomato.onclick = function () {
+        getAlert2();
+      }
+    } */ -->
+</head>
+
+<body>
+  <div class="btn" id=orange onclick="orange()">orange</div>
+  <div class="btn" id=tomato onclick="tomato()">tomato</div>
+</body>
+
+</html>
+
+<!-- <script>
+  function getAlert1() {
+    alert('오렌지 입니다');
+  }
+
+  const getAlert2 = function () {
+    alert('토마토 입니다');
+  }
+</script> -->

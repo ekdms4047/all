@@ -1,0 +1,36 @@
+<script>
+  // 입력한 언어에 따른 인사말 출력
+  const 인사말 = lang => {
+
+    let msg = '';
+
+    switch (lang) {
+      case '한국어':
+        msg = '안녕하세요?';
+        break;
+      case '영어':
+        msg = '헬로우';
+        break;
+      case '중국어':
+        msg = '니하오';
+        break;
+      case '일본어':
+        msg = '오하요';
+        break;
+      case '프랑스어':
+        msg = '봉쥬르';
+        break;
+      default:
+        '정해진 언어만 넣어주세요';
+    }
+
+    console.log(msg);
+  };
+
+
+  인사말('한국어'); // 안녕하세요
+  인사말('영어'); // 헬로우
+  인사말('중국어'); // 니하오
+  인사말('일본어'); // 오하요
+  인사말('프랑스어'); // 봉쥬르
+</script>
