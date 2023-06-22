@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>slideEx2</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-size: 1.2rem;
+      text-transform: capitalize;
+    }
+
+    .side_menu {
+      list-style: none;
+      margin: 0;
+      width: 300px;
+      background-color: #ddd;
+      padding: 0;
+    }
+
+    .side_menu h3 {
+      margin: 0;
+      background-color: rgba(17, 75, 51, 0.7);
+      padding: 8px 10px;
+      cursor: pointer;
+      border-bottom: 1px solid #fff;
+      color: #fff;
+    }
+
+    .side_menu h3:hover {
+      background-color: rgba(17, 75, 51, 1);
+    }
+
+    .side_menu p {
+      padding: 15px 10px;
+      display: none;
+      margin: 0;
+    }
+  </style>
+
+  <script src="../common/jquery-3.7.0.min.js"></script>
+  <script>
+    $(function () {
+      /* 
+        첫번째 제목을 클릭하면 첫번째 p가 내려가고 다른 p는 모두 올라감
+       $('.side_menu li').eq(0).children('h3').on('click', () => {
+         $('.side_menu li').eq(0).children('p').slideDown();
+         $('.side_menu li').eq(1).children('p').slideUp();
+         $('.side_menu li').eq(2).children('p').slideUp();
+         $('.side_menu li').eq(3).children('p').slideUp();
+       })
+ 
+       $('.side_menu li').eq(1).children('h3').on('click', () => {
+         $('.side_menu li').eq(1).children('p').slideDown();
+         $('.side_menu li').eq(0).children('p').slideUp();
+         $('.side_menu li').eq(2).children('p').slideUp();
+         $('.side_menu li').eq(3).children('p').slideUp();
+       })
+ 
+       $('.side_menu li').eq(2).children('h3').on('click', () => {
+         $('.side_menu li').eq(2).children('p').slideToggle();
+         $('.side_menu li').eq(0).children('p').slideUp();
+         $('.side_menu li').eq(1).children('p').slideUp();
+         $('.side_menu li').eq(3).children('p').slideUp();
+       }) 
+       */
+      // 내가 클릭한 h3의 
+      $('.side_menu h3').on('click', (e) => {
+        const target = $(e.target);
+        // 바로 뒤에 있는 형제 관계의 p가 열림
+        target.next('p').slideToggle();
+        // 내가 선택한 h3의 형제 관계로 있는 p 제외 모든 p를 닫음
+        target.parent().siblings().find('p').slideUp();
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <ul class="side_menu">
+    <li>
+      <h3>menu1</h3>
+      <p>끝까지 이상을 따뜻한 원대하고, 귀는 위하여서, 것이다. 기쁘며, 피에 듣기만 것이다. 품으며, 동력은 가슴에 주며, 거친 것이다. 안고, 가지에 굳세게 사라지지 인간에
+        지혜는 인생에 피어나는 있으랴? 가는 어디 눈이 청춘의 듣기만 인생에 하여도 크고 이것이다.</p>
+    </li>
+    <li>
+      <h3>menu2</h3>
+      <p>가진 불어 청춘의 타오르고 천고에 대중을 새가 놀이 몸이 보라. 살 커다란 그것을 청춘을 있다. 인간이 그들은 새가 못하다 위하여 예수는 것은 뭇 가는 위하여서.
+        사라지지
+        현저하게 심장은 커다란
+        설산에서
+        미인을 천지는 있는가? 피고 뼈 타오르고 사람은 것이다.</p>
+    </li>
+    <li>
+      <h3>menu3</h3>
+      <p>인도하겠다는 곧 피가 것이다. 석가는 생생하며, 들어 발휘하기 봄바람을 없으면 얼마나 것이다. 실현에 앞이 하는 그러므로 황금시대다. 광야에서 살 무엇이 곧 몸이 그들을
+        그들의 때문이다. 피어나는
+        되는
+        가지에 뼈 영락과 약동하다.</p>
+    </li>
+    <li>
+      <h3>menu4</h3>
+      <p>실로 품고 무한한 풀밭에 커다란 위하여 청춘의 약동하다. 능히 같지 가는 설레는 이것이야말로 청춘은 그들은 찾아다녀도, 것이다. 크고 이상은 커다란 것은 희망의 있는 실로
+        봄바람이다. 일월과 있을
+        피가
+        피가 주며, 그림자는 인생에 청춘의 부패뿐이다. 소리다.이것은 같이, 생명을 싸인 황금시대다.</p>
+    </li>
+  </ul>
+</body>
+
+</html>

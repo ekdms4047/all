@@ -1,0 +1,37 @@
+<script>
+  // 객체 생성과 동시에 프로퍼티 대입
+  // 주문하신 커피는 xxx 이며 가격은 xxx원이고 사이즈는 xxx  입니다. 콘솔에 출력
+
+
+  /*  const menu = {
+     coffee: '아메리카노',
+     price: 5000,
+     size: 'tall',
+     order: function () {
+       console.log(`주문한 커피는 ${menu.coffee}이고 가격은 ${this.price}원이고 사이즈는 ${this.size}입니다`)
+     }
+   } 
+  */
+
+  let coffee = '카페라떼', price = 6000, tall = 'tall';
+  /* 
+  const menu = {
+    coffee: coffee,// 키 coffee에 전역변수 coffee 값으로 적용
+    price: price,
+    size: tall,
+    order: function () {
+      console.log(`주문한 커피는 ${menu.coffee}이고 가격은 ${this.price}원이고 사이즈는 ${this.size}입니다`)
+    }
+  }
+ */
+  const menu = {
+    coffee,
+    price,
+    size: tall,
+    order: function () {
+      console.log(`주문한 커피는 ${menu.coffee}이고 가격은 ${this.price}원이고 사이즈는 ${this.size}입니다`)
+    }
+  }
+
+  menu.order();
+</script>

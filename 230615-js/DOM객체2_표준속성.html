@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>DOM객체1_표준속성</title>
+</head>
+
+<body>
+  <h1>html 표준 정의 속성 접근</h1>
+
+  <ul>
+    <li><a href="#" data-color="tomato" data-bg="#ddd">텍스트1</a></li>
+    <li><a href="#" data-color="orange" data-size="1.2rem">텍스트2</a></li>
+    <li><a href="#" data-color="pink" data-bg="rgba(120,10,130,0.7)">텍스트3</a></li>
+    <li><a href="#" data-color="blue" data-bg="#f96">텍스트4</a></li>
+    <li><a href="#" data-color="tan" data-size="1.3rem">텍스트5</a></li>
+  </ul>
+
+  <script>
+    /*
+      html 표준 정의 속성 접근 방법
+      ul.id = 'gnb';
+      a.href = '';
+      body.style = '';
+      input.value = '';
+      input.type = '';
+      img.src = '';
+
+      html 표준 모델에서
+        data-사용자정의이름
+          data-color="", data-name="", data-size=""
+
+      js에서 접근
+        .detaset.사용자정의이름; 사용자 정의 속성에 접근 가능
+          .dataset.color, .dataset.name, .dataset.size
+    */
+
+    const dUl = document.querySelector('ul');
+    const dAs = document.querySelectorAll('li > a');
+
+    dUl.id = 'gnb';
+    console.log(dUl.id);
+
+    // 밑줄x, 색상 검정
+    dAs.forEach((item) => {
+      item.style.textDecoration = 'none';
+      console.log(item.dataset.color);
+      item.style.color = item.dataset.color; // html 속성 중 data-속성의 이름이 color인 값을 가지고 와 대입
+
+      const bg = item.dataset.bg;
+      item.style.backgroundColor = bg;
+
+      const size = item.dataset.size;
+      item.style.fontSize = size;
+    });
+
+    // dAs[4].style.color = 'tomato';
+  </script>
+</body>
+
+</html>

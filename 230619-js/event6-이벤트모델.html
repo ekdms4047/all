@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>event6-이벤트모델</title>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+      const lis = document.querySelectorAll('ol > li');
+      console.log(lis);
+      // [li, li, li, li, li, li]
+      lis.forEach(x => {
+        x.style.backgroundColor = "#F2BED1";
+        x.style.margin = '10px 0';
+      });
+
+      const label = document.querySelector('label[for=txt]');
+      const txtBox = document.querySelector('input[id=txt]');
+
+      txtBox.addEventListener('focus', () => txtBox.style.backgroundColor = '#F266AB');
+      txtBox.addEventListener('blur', () => txtBox.style.backgroundColor = '#D4ADFC');
+
+      txtBox.addEventListener('change', (e) => { // event, evt, e / e.preventDefault(); e.stopPropagation();
+        label.style.backgroundColor = '#FF55BB';
+        // console.log(txtBox.value);
+        // .value 입력 폼의 값을 가져오거나 리턴
+
+        console.log(e.target.value); // 실제 이벤트가 발생하는 요소 반환
+      });
+
+      txtBox.addEventListener('keyup', () => label.style.color = '#ddd');
+    });
+  </script>
+</head>
+
+<body>
+  <h1>event6 - 이벤트모델</h1>
+  <p>
+    <label for="txt">name: </label>
+    <input type="text" name="txt" id="txt" placeholder="이곳에 작성하세요">
+  </p>
+
+  <ol>
+    <li>focus : 입력 폼에 커서가 생겼을 때</li>
+    <li>blur : 입력 폼에 커서가 사라졌을 때</li>
+    <li>change : 입력 폼의 내용이 변경됐을 때</li>
+    <li>keyup : 키가 떨어졌을 때</li>
+    <!-- keypress 생략해도 됨 -->
+    <li>keypress : 키가 입력되었을 때. 웹브라우저에 따라 아시아 문자를 제대로 처리하지 못해 잘 사용 안함</li>
+    <li>keydown : 키를 눌렀을 때</li>
+  </ol>
+</body>
+
+</html>
