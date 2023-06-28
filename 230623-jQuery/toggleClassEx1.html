@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>toggleClassEx1</title>
+  <style>
+    .btn_group .btn {
+      border: 3px solid #000;
+      padding: 5px 30px;
+      cursor: pointer;
+      display: inherit;
+      width: 100px;
+      text-align: center;
+    }
+
+    #box {
+      border: 1px solid #ddd;
+      height: 300px;
+      width: 300px;
+      background-color: tomato;
+      margin: 20px auto;
+      transition: 0.5s;
+    }
+
+    #box.bg {
+      background-color: lightseagreen;
+      width: 90vw;
+    }
+  </style>
+  <script src="../common/jquery-3.7.0.min.js"></script>
+</head>
+
+<body>
+  <div class="btn_group">
+    <div class="btn" id="btn">toggleClass()</div>
+  </div>
+
+  <div id="box">
+  </div>
+
+  <script>
+    $('.btn').on('click', () => {
+      $('#box').toggleClass('bg');
+    })
+  </script>
+</body>
+
+</html>

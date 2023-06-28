@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>attrEx2</title>
+  <script src="../common/jquery-3.7.0.min.js"></script>
+  <style>
+    img {
+      width: 100%;
+      vertical-align: top;
+    }
+
+    .container {
+      width: 80%;
+      margin: 50px auto;
+      border: 1px solid #222;
+    }
+
+    .btn_wrapper {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+    }
+
+    .btn_wrapper li {
+      opacity: 0.5;
+      cursor: pointer;
+    }
+
+    .btn_wrapper li:hover {
+      opacity: 1;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="main_img">
+      <img src="./images/bg1.jpg" alt="bg1">
+    </div>
+    <ul class="btn_wrapper">
+      <li><img src="./images/bg1.jpg" alt="bg1"></li>
+      <li><img src="./images/bg2.jpg" alt="bg2"></li>
+      <li><img src="./images/bg3.jpg" alt="bg3"></li>
+      <li><img src="./images/bg4.jpg" alt="bg4"></li>
+    </ul>
+  </div>
+  <script>
+    /* 첫번째 이미지 클릭시 첫번째 이미지로 메인이미지 변경
+        $(function () {
+          $('.btn_wrapper > li:first-child > img').on('click', () => {
+            $('.main_img img').attr({ 'src': './images/bg1.jpg', alt: 'bg1' })
+          })
+          $('.btn_wrapper li').eq(1).on('click', () => {
+            $('.main_img img').attr({ 'src': './images/bg2.jpg', alt: 'bg2' })
+          })
+    }); */
+
+    // event.currentTarget; 이벤트 리스너가 바인딩된 요소(지금은 li)
+    // event.target; 이벤트가 직접 클릭된 요소 (지금은)
+    $('.btn_wrapper li').on('click', (evt) => {
+      const target = $(evt.target);
+      const imgSrc = target.attr('src'); //내가 클릭한 그 li의 src 속성을 가져와라
+      const imgAlt = target.attr('alt');
+
+      $('.main_img img').attr({ src: imgSrc, alt: imgAlt });
+    })
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>addClassEx1</title>
+  <script src="../common/jquery-3.7.0.min.js"></script>
+  <style>
+    .tab_menu {
+      list-style: none;
+      padding: 0;
+      margin: 50px auto;
+      width: 599px;
+      position: relative;
+      padding-top: 50px;
+    }
+
+    /* 각 영역의 제목 */
+    .tab_menu .tab_btn {
+      text-transform: uppercase;
+      margin: 0;
+      padding: 10px;
+      background-color: #D3D04F;
+      border-radius: 20px 20px 0 0;
+      text-align: center;
+      box-sizing: border-box;
+      width: 199px;
+      height: 50px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      cursor: pointer;
+    }
+
+    .tab_menu #tab2 .tab_btn {
+      left: 200px;
+    }
+
+    .tab_menu #tab3 .tab_btn {
+      left: 400px;
+    }
+
+    /* 각 영역의 문단 */
+    /*  .tab_menu li {
+      overflow: hidden;
+    } 주석 처리 방법 또는 .tab_menu { padding-top: 50px;}  */
+
+    .tab_menu p {
+      margin: 0;
+      box-sizing: border-box;
+      padding: 20px;
+      display: none;
+      /* margin-top: 50px; */
+    }
+
+    .tab_menu p strong {
+      display: block;
+      margin: 10px 0;
+    }
+
+    .tab_menu li.active h2,
+    .tab_menu li.active p {
+      background-color: #8EAC50;
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- addClass removeClass -->
+  <ul class="tab_menu">
+    <li id="tab1">
+      <h2 class="tab_btn" class="active">Html5</h2>
+      <p>
+        <strong>html5 Tutorial</strong>
+        <span>뭇 이는 놀이 보배를 안고, 속잎나고, 심장의 듣는다. 것은 과실이 풍부하게 청춘의 그들은 사람은 너의 피가 사랑의 있는가? 투명하되 피부가 꾸며 이상을 사랑의 오직 역사를
+          칼이다.</span>
+      </p>
+    </li>
+    <li id="tab2">
+      <h2 class="tab_btn">CSS3</h2>
+      <p>
+        <strong>CSS3 Tutorial</strong>
+        <span>
+          위하여 방지하는 그러므로 것이다. 불어 바로 같으며, 인간의 유소년에게서 목숨이 교향악이다.</span>
+      </p>
+    </li>
+    <li id="tab3">
+      <h2 class="tab_btn">Javascript</h2>
+      <p>
+        <strong>Javascript Tutorial</strong>
+        <span> 이상이 용감하고 투명하되 낙원을 같이, 소담스러운 인생에 인류의 아니다. 하였으며, 끓는 어디 충분히 이성은 실현에 위하여서. 청춘이 할지라도 풀밭에 희망의 인생을 원질이 것이다.보라,
+          사람은 봄바람이다.</span>
+      </p>
+    </li>
+  </ul>
+  <script>
+    /*
+      $('.tab_menu li:first-child').on('click', () => {
+        $('.tab_menu li').removeClass('active');
+        $('.tab_menu li:first-child').addClass('active');
+      });
+  
+      $('.tab_menu li').eq(1).on('click', () => {
+        $('.tab_menu li').removeClass('active');
+        $('.tab_menu li').eq(1).addClass('active');
+      });
+   */
+    $('.tab_menu li .tab_btn').on('click', (e) => {
+      $('.tab_menu li').removeClass('active');
+      $(e.currentTarget).parent().addClass('active');
+    })
+  </script>
+</body>
+
+</html>

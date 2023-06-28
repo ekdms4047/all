@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>animateEx2</title>
+  <script src="../common/jquery-3.7.0.min.js"></script>
+  <script src="../common/jquery-ui.min.js"></script>
+  <!-- 슬라이드 무족권!! 통째(ul)로 옮겨야 함 거의 다 99% 그럼-->
+  <!-- 기본 방향을 left로 기준! 마이너스값으로 -->
+  <!-- 이런 모양을 페이지네이션이라고 함 -->
+  <style>
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    img {
+      width: 100%;
+      vertical-align: top;
+    }
+
+    .container {
+      width: 50vw;
+      border: 3px solid #000;
+      margin: 50px auto;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .container .btn_group {
+      display: flex;
+      justify-content: center;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+    }
+
+    .container .btn_group li {
+      text-indent: -9999px;
+      background-color: rgba(255, 255, 255, 0.7);
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      margin: 10px 3px;
+      cursor: pointer;
+      z-index: 99;
+    }
+
+    .container .btn_group li:hover {
+      background-color: rgba(255, 255, 255, 1);
+    }
+
+    .container .slider {
+      display: flex;
+      outline: 3px solid #b13a3a;
+      /* img : 50vw * 4 */
+      width: 200vw;
+    }
+
+    .container .slider li {
+      flex-grow: 1;
+      /* width: 100%; */
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <ul class="btn_group">
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+    </ul>
+    <ul class="slider">
+      <li><img src="./images/bg1.jpg" alt="img1"></li>
+      <li><img src="./images/bg2.jpg" alt="img2"></li>
+      <li><img src="./images/bg3.jpg" alt="img3"></li>
+      <li><img src="./images/bg4.jpg" alt="img4"></li>
+    </ul>
+  </div>
+  <script>
+    /*
+      $('.btn_group li').eq(0).on('click', () => {
+        $('.slider').animate({ marginLeft: 0 }, 300);
+      });
+      $('.btn_group li').eq(1).on('click', () => {
+        $('.slider').animate({ marginLeft: '-50vw' }, 300);
+      });
+      $('.btn_group li').eq(2).on('click', () => {
+        $('.slider').animate({ marginLeft: '-100vw' }, 300);
+      });
+      $('.btn_group li').eq(3).on('click', () => {
+        $('.slider').animate({ marginLeft: '-150vw' }, 300);
+      });
+   */
+    $('.btn_group li').on('click', (e) => {
+      let idx = $(e.target).index(); // 인덱스 값을 가져오거나 리턴
+      $('.slider').animate({ marginLeft: -50 * idx + 'vw' }, 300);
+    })
+  </script>
+</body>
+
+</html>

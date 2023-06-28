@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>classEx2</title>
+  <style>
+    .container {
+      position: relative;
+      margin: 50px auto;
+    }
+
+    .container .txt_wrapper {
+      /* background-color: #ddd; */
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    .container .txt_wrapper span {
+      color: blueviolet;
+      font-size: 1.5rem;
+      font-weight: bold;
+      display: block;
+      transition: 0.5s;
+      transform: translateY(20px);
+      opacity: 0;
+    }
+
+    .container .txt_wrapper h2 {
+      opacity: 0;
+      color: deeppink;
+      font-size: 3rem;
+      font-weight: bold;
+      margin: 20px 0;
+      line-height: 1;
+      /* 진행시간 대기시간 */
+      transition: 1s 0.8s;
+      transform: translateY(40px);
+    }
+
+    .container .txt_wrapper.active span,
+    .container .txt_wrapper.active h2 {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  </style>
+  <script src="../common/jquery-3.7.0.min.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="txt_wrapper active">
+      <span>about</span>
+      <h2>think & <br> solution</h2>
+    </div>
+    <div class="txt_wrapper">
+      <span>Skills</span>
+      <h2>html5&css3 <br> Javascript</h2>
+    </div>
+    <div class="txt_wrapper">
+      <span>contact</span>
+      <h2>dh5ek<br>@naver.com</h2>
+    </div>
+
+    <script>
+      // setTimeout(함수, 시간);
+
+      function movingLetter(n) {
+        const txt = $('.txt_wrapper');
+        const currentTxt = txt.eq(n);
+        const nextIdx = (n + 1) % txt.length;
+
+        txt.removeClass('active');
+        currentTxt.addClass('active');
+
+        setTimeout(function () {
+          movingLetter(nextIdx); // 재귀함수
+        }, 2000);
+      }
+
+      let num = 0;
+      movingLetter(num);
+    </script>
+</body>
+
+</html>
