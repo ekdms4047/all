@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>scrollEx1</title>
+  <script src="../common/jquery-3.7.0.min.js"></script>
+  <style>
+    /* html {scroll-behavior: smooth;} */
+    /* javascript 스크롤이랑 충돌이 일어남!!!! 잘 사용하지 않음 */
+
+    .box {
+      height: 300vh;
+    }
+
+    .btn {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      font-size: 4rem;
+      transition: 0.5s;
+      opacity: 1;
+      animation: people infinite 3s ease-in-out;
+      /* 마우스 성격 변경. none; 아무 표시 없음 */
+      /* pointer-events: none; */
+    }
+
+    @keyframes people {
+
+      0%,
+      100% {
+        transform: translateY(0) rotate(-5deg);
+      }
+
+      50% {
+        transform: translateY(-20px) rotate(5deg);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">
+    <h1>top</h1>
+  </div>
+
+  <a href="#" class="btn">👨🏿‍🌾</a>
+
+
+  <script>
+    $('.btn').on('click', evt => {
+      evt.preventDefault();
+      scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    });
+/*
+                                $(window).on('scroll', () => {
+                                  let scrollHt = $(document).scrollTop();
+                                  /* 조건식 ? true : false;
+                                  if (scrollHt > 300) {
+                                    $('.btn').css({ opacity: 1, pointerEvents: 'all' })
+                                  } else {
+                                    $('.btn').css({ opacity: 0, pointerEvents: 'none' })
+                                  }
+                                
+                                  // scrollY y축으로 스크롤한 거리
+                                  if (scrollY > 300) {
+                                    $('.btn').css({ opacity: 1, pointerEvents: 'all' })
+                                  } else {
+                                    $('.btn').css({ opacity: 0, pointerEvents: 'none' })
+                                  }
+                                })
+                            */
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>scrollEx3</title>
+  <script src="../common/jquery-3.7.0.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      text-align: center;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
+    nav {
+      background-color: orange;
+      padding: 20px;
+    }
+
+    h1 {
+      margin: 0;
+      background-color: darkred;
+      padding: 40px;
+      position: sticky;
+      top: 0;
+    }
+
+    main {
+      height: 400vh;
+      background-color: #ddd;
+    }
+
+    footer {
+      background-color: #222;
+      color: #fff;
+      padding: 50px;
+    }
+
+    .banner {
+      background-color: lightblue;
+      position: fixed;
+      right: -250px;
+      bottom: 100px;
+      transition: 0.4s;
+      width: 250px;
+      height: 100px;
+      line-height: 100px;
+    }
+
+    .banner.on {
+      right: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <nav>내비게이션</nav>
+  <h1>scrollEx3</h1>
+  <main>원하는 위치에서 실행</main>
+  <footer>푸터</footer>
+
+  <div class="banner">배너입니다</div>
+
+
+  <script>
+    $(window).on('scroll', () => {
+      let footerHeight = $('footer').offset().top;
+      console.log(scrollY); // 스크롤값
+      console.log(footerHeight); // body 시작에서부터의 거리
+      console.log($('footer').height()); // footer의 높이
+      console.log(document.documentElement.clientHeight) // 화면의 크기
+
+      let result = footerHeight - $('footer').height() - document.documentElement.clientHeight
+
+      if (scrollY > result) {
+        $('.banner').addClass('on');
+      } else {
+        $('.banner').removeClass('on');
+      }
+    });
+  </script>
+</body>
+
+</html>
