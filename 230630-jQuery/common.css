@@ -1,0 +1,13 @@
+@charset "utf-8";
+
+body {
+  font-size: 2rem;
+  font-weight: bold;
+}
+.flex_wrap {
+  display: flex;
+  align-items: center;
+}
+.transit {
+  transition: 0.3s;
+}
