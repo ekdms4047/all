@@ -1,0 +1,84 @@
+@charset "utf-8";
+
+#main-slide {
+  width: 100%;
+  height: 80vh;
+  /* background-color: #ddd; */
+}
+/* 이미지 보여지게 ! */
+/* .parallax-bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 130%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+} */
+#main-slide li {
+  background: no-repeat 50% / cover;
+}
+#main-slide #bg1 {
+  background-image: url(https://placehold.co/1000x500/A6D0DD/000?text=bg1);
+}
+#main-slide #bg2 {
+  background-image: url(https://placehold.co/1000x500/FF9B9B/000?text=bg2);
+}
+#main-slide #bg3 {
+  background-image: url(https://placehold.co/1000x500/FFD6A5/000?text=bg3);
+}
+#main-slide #bg4 {
+  background-image: url(https://placehold.co/1000x500/898121/000?text=bg4);
+}
+
+/* 텍스트 */
+#main-slide .text-wrapper {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 400px;
+  height: 200px;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 20px;
+}
+#main-slide .text-wrapper .title {
+  font-size: 2rem;
+  font-weight: 500;
+}
+#main-slide .text-wrapper .subtitle {
+  font-size: 1.5rem;
+  margin: 5px 0;
+}
+#main-slide .text-wrapper .text {
+  line-height: 1.5;
+}
+
+/* pagination */
+#main-slide .my-pagination {
+  border: 1px solid #ddd;
+  position: absolute;
+  left: 50px;
+  top: 50px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  line-height: 60px;
+  /* display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  place-items: center; */
+}
+
+/* 화살표 버튼 */
+.swiper-button-prev::after,
+.swiper-rtl .swiper-button-next::after {
+  content: "🤛";
+  /* background-color: #fff; */
+  display: block;
+  width: 10px;
+  height: 50px;
+  opacity: 0.5;
+}
+.swiper-button-prev:hover::after,
+.swiper-rtl .swiper-button-next:hover::after {
+}
