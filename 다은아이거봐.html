@@ -1,0 +1,44 @@
+AOS.init()
+// document.addEventListener("DOMContentLoaded", () => {
+//   // window.setTimeout(() => {
+//     document.body.classList.add("fade_out")
+//   // },500);
+// });
+
+// 어렵게 생각했기 때문에 
+// 뒤로가기, 새로고침, html 로드 되는것, 페이지를 떠나는것,
+// 다른탭으로 이동하는것들도 전부 브라우저가 가지고 있는 이벤트
+// 디큐멘트 자체로 이 모든것들을 감지할 수 있다는것을 알았다.
+// 브라우저 상에서 할 수 있는 모든 행동은 전부 이벤트다.
+// DOMContentLoaded load 차이 를 알게됐고
+// filter 를 적용 시키면 오류가 발생한다.
+
+
+// html 로딩 될 때 동작이 되어야 하는 거임
+// $(function () {
+//   $("body").fadeIn(500, function () {
+//     $(this).animate(
+//       {
+//         top: "100px",
+//       },
+//       1000
+//     );
+//   });
+
+//   $(".moving").click(function () {
+//     var url = $(this).attr("href");
+//     $("body").animate(
+//       {
+//         opacity: "0",
+//         // blur,
+//         top: "100px",
+//       },
+//       5000,
+//       function () {
+//         document.location.href = url;
+//       }
+//     );
+
+//     return false;
+//   });
+// });
