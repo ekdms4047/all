@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>pixabay3-ajax</title>
+  <style>
+    .result-container {
+      border-top: 3px solid #000;
+      margin-top: 20px;
+    }
+  </style>
+  <script src="../common/jquery-3.7.0.min.js"></script>
+</head>
+
+<body>
+  <form>
+    <input type="search" id="search-item">
+    <button type="submit" id="search-btn">검색</button>
+  </form>
+  <div class="result-container">
+  </div>
+
+  <script>
+    const searchPixabay = (value) => {
+      const API_KEY = '37039658-cc9d56ed8b70fbcc207974509';
+      const URL = `https://pixabay.com/api/?key=${API_KEY}&q=${encodeURIComponent(value)}`;
+      $.ajax({
+        url: URL,
+        dataType: "json",
+        method: "GET",
+        success: function (data) {
+          console.log(data.hits);
+        },
+        error: function (error) {
+          console.log('에러', error)
+        }
+      })
+    }
+
+    $('#search-btn').on('click', function (e) {
+      e.preventDefault();
+      // .val(); 인풋의 입력값을 가져오거나 리턴
+      const userValue = $('#search-item').val();
+      searchPixabay(userValue);
+    });
+  </script>
+</body>
+
+</html>

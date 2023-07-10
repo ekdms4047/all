@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>pixabay1-ajax</title>
+  <style>
+    .border {
+      border: 1px solid #000;
+      margin: 10px;
+    }
+  </style>
+  <script src="../common/jquery-3.7.0.min.js"></script>
+</head>
+
+<body>
+  <ul class="container"></ul>
+
+  <script>
+    // q : 검색어로 띄어쓰기는 +로 표기
+    $.ajax({
+      url: "https://pixabay.com/api/?key=37039658-cc9d56ed8b70fbcc207974509&q=dog",
+      dataType: "json",
+      method: "GET",
+      success: function (data) {
+        // console.log(data.hits);
+        if (data.hits.length > 0) {
+          data.hits.forEach(item => {
+            let li = $('<li>').addClass('border');
+            $('<h3>').text(item.tags).appendTo(li);
+            $('<img>').attr({ 'src': item.previewURL, 'alt': item.tags }).appendTo(li);
+
+            $('.container').append(li);
+          });
+        } else {
+          console.log('이미지가 없습니다.')
+        }
+      },
+      error: function (err) {
+        console.log('에러', err);
+      }
+    })
+  </script>
+</body>
+
+</html>

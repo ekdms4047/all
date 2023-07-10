@@ -1,0 +1,26 @@
+[
+  {
+    "title": "bg1",
+    "description": "배경이미지 1입니다",
+    "url": "./images/bg1.jpg",
+    "id": 1
+  },
+  {
+    "title": "bg2",
+    "description": "배경이미지 2입니다",
+    "url": "./images/bg2.jpg",
+    "id": 2
+  },
+  {
+    "title": "bg3",
+    "description": "배경이미지 3입니다",
+    "url": "./images/bg3.jpg",
+    "id": 3
+  },
+  {
+    "title": "bg4",
+    "description": "배경이미지 4입니다",
+    "url": "https://placehold.co/400x200/orange/white",
+    "id": 4
+  }
+]

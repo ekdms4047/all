@@ -1,44 +1,92 @@
-AOS.init()
-// document.addEventListener("DOMContentLoaded", () => {
-//   // window.setTimeout(() => {
-//     document.body.classList.add("fade_out")
-//   // },500);
-// });
+<!-- document.addEventListener("DOMContentLoaded", () => {
+    window.setTimeout(() => {
+     document.body.classList.add("fade_out")
+    },500);
+ });
+// 메뉴 클릭 페이지 변경시 안보였다가 몇초 뒤에 나타남
+window.addEventListener("load", () => {
+    document.body.classList.add("fade_out")
+});
 
-// 어렵게 생각했기 때문에 
-// 뒤로가기, 새로고침, html 로드 되는것, 페이지를 떠나는것,
-// 다른탭으로 이동하는것들도 전부 브라우저가 가지고 있는 이벤트
-// 디큐멘트 자체로 이 모든것들을 감지할 수 있다는것을 알았다.
-// 브라우저 상에서 할 수 있는 모든 행동은 전부 이벤트다.
-// DOMContentLoaded load 차이 를 알게됐고
-// filter 를 적용 시키면 오류가 발생한다.
+ 어렵게 생각했기 때문에 
+ 뒤로가기, 새로고침, html 로드 되는것, 페이지를 떠나는것,
+ 다른탭으로 이동하는것들도 전부 브라우저가 가지고 있는 이벤트
+ 디큐멘트 자체로 이 모든것들을 감지할 수 있다는것을 알았다.
+ 브라우저 상에서 할 수 있는 모든 행동은 전부 이벤트다.
+ DOMContentLoaded load 차이 를 알게됐고
+ filter 를 적용 시키면 오류가 발생한다.
+ 처음에 load 대신 DOMcontentLoaded 를 사용했었는데 될 때도 있고 안될 때도 있는 오류가 있었다. 
+-->
 
 
-// html 로딩 될 때 동작이 되어야 하는 거임
-// $(function () {
-//   $("body").fadeIn(500, function () {
-//     $(this).animate(
-//       {
-//         top: "100px",
-//       },
-//       1000
-//     );
-//   });
+<!-- html 로딩 될 때 동작이 되어야 하는 거임
+ $(function () {
+   $("body").fadeIn(500, function () {
+     $(this).animate(
+       {
+         top: "100px",
+       },
+       1000
+     );
+   });
 
-//   $(".moving").click(function () {
-//     var url = $(this).attr("href");
-//     $("body").animate(
-//       {
-//         opacity: "0",
-//         // blur,
-//         top: "100px",
-//       },
-//       5000,
-//       function () {
-//         document.location.href = url;
-//       }
-//     );
+   $(".moving").click(function () {
+     var url = $(this).attr("href");
+     $("body").animate(
+       {
+         opacity: "0",
+          blur,
+         top: "100px",
+       },
+       5000,
+       function () {
+         document.location.href = url;
+       }
+     );
 
-//     return false;
-//   });
-// });
+     return false;
+   });
+ }); -->
+
+<!-- Team Project Report
+
+ 작성자 : 오다은
+ 
+ 1. Overview
+ - 팀명 : JYP
+ - 조원 : 오다은, 김나현, 이현경, 이성우
+ ​- 프로젝트 : 
+ - 기간 : 23.06.30～23.7.10(11일)
+ 
+ 2. 진행 과정
+   1) 팀원 구성, 리더 선정
+   2) 레퍼런스 사이트, 리디자인 사이트 선정
+   3) git organizations 생성 및 구성
+   4) 피그마로 디자인 작업 실행
+   5) 페이지 역할 분담
+   6) 각자 맡은 페이지 html, css ,javascript 구현
+   7) 다 같이 토론 후 수정 부분 보완
+ 
+ 3. 담당 업무
+ - collection, account, cart 페이지 html, css, javascript 작성
+ 
+ 4. 프로젝트 결과
+ : 작업 시작때부터 서로 너무 기분 좋게 시작을 해서 나중에 분위기가 안좋아지면 어떡하지? 했는데 처음 분위기 그대로 끝까지 유지돼서 만족할만한 결과가 나왔고. 하면서 완죠니 너무 좋았다.
+ 서로 수정했으면 하는 부분을 좋게 대화를 해서 좋은 방향으로 이끌어 갈 수 있었던것같다.
+ 
+ 5. 부족한 점
+ : 자바스크립트 구현할 때 좀 더 어려운 방향으로 풀어내거나 다양하게 풀어내고 싶었는데
+ 비교적 간단한 코드를 적용하거나 많은 자바스크립트를 구현하지 못해서 아쉬웠다.
+ 
+ 6. 잘한 점
+ - 정해진 기간 내의 제출
+ - 조원들과의 원활한 의사소통
+ - 공평하게 다수결로 정한 점
+ - 확고할 땐 확실하게 의견을 낸 점 
+ - 조원과 함께 파이팅 외치며 긍정적으로 접한 태도
+ 
+ 7. 배운 점
+ : 하나의 앱을 만들기 위해선 다양한 단계를 거쳐야 하며 다 같이 노력해야 좋은 결과물을 가져올 수 있다는 걸 한 번 더 깨닫게 되는 계기가 되었습니다. 
+ 
+ 8. 개인 리뷰
+ : 대화를 나눠본 적도 없고, 같은 수업을 듣는 분들이라는 것만 아는 상태에서 팀 프로젝트를 시작하게 돼서 초반엔 되게 낯설고 서먹했습니다. 또한 협업이다 보니 혼자서 할 때 보다 신경 쓸 일이 많아지고 모든 결정을 다 같이 의논해야 했기 때문에 힘들게 느껴졌습니다. 하지만 진행이 되면서 점점 완성돼가는 결과물을 보니 배로 뿌듯했고 조금의 아쉬움이 남지만 보람찬 프로젝트였습니다. -->

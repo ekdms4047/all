@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>pixabay2-fetch</title>
+  <script src="../common/jquery-3.7.0.min.js"></script>
+</head>
+
+<body>
+  <h1></h1>
+  <h2><a href="https://developer.mozilla.org/ko/docs/Web/API/Fetch_API" target="_blank">
+      fetch MDN</a></h2>
+
+  <ul class="container"></ul>
+
+  <script>
+    const API_KEY = '37039658-cc9d56ed8b70fbcc207974509';
+    const URL = `https://pixabay.com/api/?key=${API_KEY}&q=cat`;
+
+    fetch(URL)
+      .then(response => response.json())
+      .then(data => {
+        // console.log(data.hits)
+        if (data.hits.length > 0) {
+          data.hits.forEach(item => {
+            let li = $('<li>').addClass('border');
+            $('<h3>').text(item.tags).appendTo(li);
+            $('<img>').attr({ 'src': item.previewURL, 'alt': item.tags }).appendTo(li);
+
+            $('.container').append(li);
+          });
+        } else {
+          console.log('이미지가 없습니다.')
+        }
+      })
+      .catch(err => console.log('에러', err));
+  </script>
+</body>
+
+</html>

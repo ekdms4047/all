@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>AJAX2</title>
+  <style>
+    .border {
+      border: 1px solid #000;
+      margin: 10px;
+    }
+  </style>
+  <script src="../common/jquery-3.7.0.min.js"></script>
+</head>
+
+<body>
+  <h1>외부 JSON 데이터 불러오기</h1>
+  <ol class="gallery">
+  </ol>
+  <script>
+    $.ajax({
+      url: "https://jsonplaceholder.typicode.com/photos",
+      dataType: "json",
+      success: function (photos) {
+        if (photos.length > 0) {
+          console.log(photos.slice(0, 10));
+          // .slice(시작인덱스, 인덱스 바로 앞 까지만 출력)
+          photos.slice(0, 10).forEach(photo => {
+            // console.log(photo)
+            let li = $('<li>').addClass('border');
+            $('<h3>').text(photo.title).appendTo(li);
+            $('<img>').attr({ 'src': photo.thumbnailUrl, 'alt': photo.title }).appendTo(li);
+
+            $('.gallery').append(li);
+          });
+        }
+
+      }
+    });
+
+  </script>
+</body>
+
+</html>
