@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>pixabay3-ajax</title>
+  <title>pixabay4-fetch</title>
   <style>
     .result-container {
       border-top: 3px solid #000;
@@ -23,23 +23,21 @@
   </div>
 
   <script>
+
     const searchPixabay = (value) => {
       const API_KEY = '37039658-cc9d56ed8b70fbcc207974509';
       const URL = `https://pixabay.com/api/?key=${API_KEY}&q=${encodeURIComponent(value)}`;
 
-      $.ajax({
-        url: URL,
-        dataType: "json",
-        method: "GET",
-        success: function (data) {
-          console.log(data.hits);
+      fetch(URL)
+        .then(res => res.json())
+        .then(data => {
+          console.log(data.hits)
 
           // 기존 검색 결과 비움
           $('.result-container').empty();
 
           data.hits.forEach(image => {
             const previewURL = image.previewURL;
-
 
             const img = $('<img>').attr({
               'src': previewURL, 'alt': image.tags
@@ -50,11 +48,10 @@
 
           // 검색 후 입력란 비움
           $('#search-item').val('');
-        },
-        error: function (error) {
-          console.log('에러', error)
-        }
-      })
+
+        })
+        // 생략 가능
+        .catch(err => console.log('에러', err));
     }
 
     $('#search-btn').on('click', function (e) {
